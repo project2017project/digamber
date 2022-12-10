@@ -155,10 +155,8 @@
 <section class="loans-new-wrapper">
    <div class="container pt-4 pb-5">
       <div class="title-wrap pt-5 pb-4">
-         <h4>Our Loans Are Designed For One Thing Your Business Need</h4>
-         <p class="title-foot-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et.
-         </p>
+         <h4><?php echo $settings['loanHeading']; ?></h4>
+         <p class="title-foot-text"><?php echo $settings['loanSubHeading']; ?></p>
       </div>
       <div class="row loans-top-row">
          <div class="col-lg-6 col-md-6 loans-new-back-img" style="background-image:url('images/Home_Loan/<?php echo $settings['loanImage1']; ?>');">
@@ -337,13 +335,8 @@
       <div class="row">
          <div class="col-12">
             <div class="back-title pt-5 pb-5">
-               <h4 class="pt-3">stakeholders</h4>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-               </p>
+               <h4 class="pt-3"><?php echo $settings['stakeHeading']; ?></h4>
+               <?php echo $settings['stakeMessage'];?>
             </div>
          </div>
       </div>
@@ -356,24 +349,13 @@
       <div class="row">
          <div class="col-12">
             <div class="partners">
+               <?php 
+               while ($partner = mysqli_fetch_array($partnersres)) {
+                  ?>        
                <div class="partner-img">
-                  <img src="images/sbi-1.png">
+                  <img src="images/Partners/<?php echo $partner['partnersImage'];?>">
                </div>
-               <div class="partner-img">
-                  <img src="images/idfc-2.png">
-               </div>
-               <div class="partner-img">
-                  <img src="images/ib-3.png">
-               </div>
-               <div class="partner-img">
-                  <img src="images/ub-4.png">
-               </div>
-               <div class="partner-img">
-                  <img src="images/sidbi-5.png">
-               </div>
-               <div class="partner-img">
-                  <img src="images/bb-6.png">
-               </div>
+               <?php } ?>   
             </div>
          </div>
       </div>

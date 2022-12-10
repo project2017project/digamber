@@ -14,6 +14,16 @@ $settings = mysqli_fetch_array($res);
                     <table id="tbl" class="display table table-bordered table-hover table-striped">
                         <form action="Edit_Home_Loan_action.php" method="post" name="loginform" enctype="multipart/form-data">
                             <tbody>
+                                <tr>
+                                    <td>Heading</td>
+                                    <td><input type="text" class="ckeditor" value="<?php echo $settings['loanHeading']; ?>" name="loanHeading" />
+                                    Note: for new line please use &lt;br&gt; tag.</td>
+                                </tr>
+                                <tr>
+                                    <td>SubHeading</td>
+                                    <td><input type="text" class="ckeditor" value="<?php echo $settings['loanSubHeading']; ?>" name="loanSubHeading" />
+                                    Note: for new line please use &lt;br&gt; tag.</td>
+                                </tr>
                                 <tr class="active">
                                     <td>Image 1</td>
                                     <td>

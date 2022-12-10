@@ -81,9 +81,16 @@ IF (!isset($_SESSION['User_Name'])) {
                                 <li><a href="Edit_Home_Banner.php"><i class="fa fa-flask nav_icon"></i>Banner</a></li>
                                 <li><a href="Edit_Home_About.php"><i class="fa fa-flask nav_icon"></i>About</a></li>
                                 <li><a href="Edit_Home_Loan.php"><i class="fa fa-flask nav_icon"></i>Loan</a></li>
-                                <li><a href="homepage_getstarted.php">Get Started</a></li>
+                                <li><a href="Edit_Home_Stake.php"><i class="fa fa-flask nav_icon"></i>Stake</a></li>
                             </ul>
-
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Partners<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">                                
+                                <li><a href="partners.php"><i class="fa fa-flask nav_icon"></i>List</a></li>
+                                <li><a href="partnersAdd.php"><i class="fa fa-flask nav_icon"></i>Add</a></li>
+                                <li><a href="partnersEdit.php"><i class="fa fa-flask nav_icon"></i>Edit</a></li>
+                            </ul>
                         </li>
                         <li><a href="news.php"><i class="fa fa-dashboard fa-fw nav_icon"></i>News</a></li>
                         <li><a href="competencies-type.php"><i

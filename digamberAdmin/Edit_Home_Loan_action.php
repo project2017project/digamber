@@ -2,6 +2,9 @@
 
 include '../dbconection/connection.php';
 $id = $_POST['id'];
+$loanHeading=$_POST['loanHeading'];
+$loanSubHeading=$_POST['loanSubHeading'];
+
 $loanHeading1=$_POST['loanHeading1'];
 $loanMessage1=trim($_POST['loanMessage1']);
 $loanpopupHeading1=$_POST['loanpopupHeading1'];
@@ -26,6 +29,8 @@ if (move_uploaded_file($_FILES['pic1']['tmp_name'], $destination1) || move_uploa
 
     if (!empty($mypicname1) && !empty($mypicname2)) {
         $sql = "UPDATE `settings` SET `loanImage1` = '" . $mypicname1 . "',
+                                `loanHeading` = '" . $loanHeading . "',
+                                `loanSubHeading` = '" . $loanSubHeading . "',
                                 `loanHeading1` = '" . $loanHeading1 . "',
                                 `loanMessage1` = '" . $loanMessage1 . "',
                                 `loanpopupHeading1` = '" . $loanpopupHeading1 . "',
@@ -40,6 +45,8 @@ if (move_uploaded_file($_FILES['pic1']['tmp_name'], $destination1) || move_uploa
     } else {
         if (!empty($mypicname1)) {
             $sql = "UPDATE `settings` SET `loanImage1` = '" . $mypicname1 . "',
+                                `loanHeading` = '" . $loanHeading . "',
+                                `loanSubHeading` = '" . $loanSubHeading . "',
                                 `loanHeading1` = '" . $loanHeading1 . "',
                                 `loanMessage1` = '" . $loanMessage1 . "',
                                 `loanpopupHeading1` = '" . $loanpopupHeading1 . "',
@@ -53,6 +60,8 @@ if (move_uploaded_file($_FILES['pic1']['tmp_name'], $destination1) || move_uploa
             $res = $mysqli->query($sql);
         } else if (!empty($mypicname2)) { 
             $sql = "UPDATE `settings` SET `loanImage2` = '" . $mypicname2 . "',
+                                `loanHeading` = '" . $loanHeading . "',
+                                `loanSubHeading` = '" . $loanSubHeading . "',
                                 `loanHeading1` = '" . $loanHeading1 . "',
                                 `loanMessage1` = '" . $loanMessage1 . "',
                                 `loanpopupHeading1` = '" . $loanpopupHeading1 . "',
@@ -70,6 +79,8 @@ if (move_uploaded_file($_FILES['pic1']['tmp_name'], $destination1) || move_uploa
     header("location:Edit_Home_Loan.php");
 } else {
     $sql = "UPDATE `settings` SET `loanImage1` = '" . $imagename['loanImage1'] . "',
+                                `loanHeading` = '" . $loanHeading . "',
+                                `loanSubHeading` = '" . $loanSubHeading . "',
                                 `loanHeading1` = '" . $loanHeading1 . "',
                                 `loanMessage1` = '" . $loanMessage1 . "',
                                 `loanpopupHeading1` = '" . $loanpopupHeading1 . "',
