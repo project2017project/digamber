@@ -1,0 +1,74 @@
+<?php
+include '../dbconection/connection.php';
+session_start();
+IF (!isset($_SESSION['User_Name'])) {
+    echo "<script> window.location.href = 'login.php';</script>";
+    //header('location:login.php');
+} else {
+    //echo "Welcome".$_SESSION['User_Name'];
+    //echo "Id:-&ensp;" .$_SESSION['A_Id'];
+}
+?>
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Feedback Admin</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="feedback" />
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>        <!--hemendra -->
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"  type="text/css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <script src="//code.jquery.com/jquery-1.12.3.js" type="text/javascript"></script>
+        <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" type="text/javascript"></script>
+        <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+        <link href="css/fontello/css/fontello.css" rel='stylesheet' type='text/css' />
+        <link href="css/fontello/css/icon_set_1.css" rel='stylesheet' type='text/css' />
+        <link href="css/style.css" rel='stylesheet' type='text/css' />
+        <link href="css/lines.css" rel='stylesheet' type='text/css' />
+        <link href="css/font-awesome.css" rel="stylesheet"> 
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+        <link href="css/custom.css" rel="stylesheet">
+        <link href="css/sdstyle.css" rel='stylesheet' type='text/css' />
+        <script src="js/metisMenu.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/d3.v3.js"></script>
+        <script src="js/rickshaw.js"></script>
+    </head>
+<body>
+        <div id="wrapper">
+            <!-- Navigation -->
+            <nav class="top1 navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.php"><img height="50px" width='auto' src="../images/logo.png"></a>
+                </div>
+                <!-- /.navbar-header -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown"><span class="badge">Account</span></a>
+                        <ul class="dropdown-menu">
+                            <li class="m_2"><a href="profile.php"><i class="fa fa-user"></i> Profile</a></li>
+                            <li class="m_2"><a href="logout.php"><i class="fa fa-lock"></i> Logout</a></li>	
+                        </ul>
+                    </li>
+                </ul>
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+                            <li><a href="index.php"><i class="fa fa-dashboard fa-fw nav_icon"></i>Dashboard</a></li>
+                            <li><a href="news.php"><i class="fa fa-dashboard fa-fw nav_icon"></i>News</a></li>
+                            <li><a href="competencies-type.php"><i class="fa fa-dashboard fa-fw nav_icon"></i>Compentency</a></li>
+                            <li><a href="reviewerslist.php"><i class="fa fa-dashboard fa-fw nav_icon"></i>Reviewers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="page-wrapper">
+                <div class="graphs">
