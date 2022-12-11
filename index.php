@@ -78,75 +78,18 @@
 <!-- ======== six-col-section-start ======= -->
 <section class="section-6" style="background-image: url('images/i4.png');">
    <div class="container sixth-cont-wrap pt-5 pb-2">
-      <h3 class="pt-4">At A Glance</h3>
-      <p>Key Financial Highlights as on 31<sup>st</sup> Dec 2022</p>
+      <h3 class="pt-4"><?php echo $settings['glanceHeading']; ?></h3>
+      <?php echo $settings['glanceSubHeading']; ?>
       <div class="row pt-4 pb-4">
+         <?php while ($glance = mysqli_fetch_array($glanceres)) { ?>
          <div class="col-lg-2 col-md-4 col-xs-6 col-sm-6 col-6" id="counter-box"  data-aos="flip-up">
             <div class="icon-box-wrap">
-               <img src="images/DF Website_glance-1.png">
-               <!-- <a href="#">
-                  <i class="fa-solid fa-user"></i>
-                  
-                  </a> -->
+               <img src="images/glance/<?php echo $glance['glanceImage']; ?>">
             </div>
-            <h5 class="counter" data-number="401652" ></h5>
-            <span>No. Of Active Customer</span>
+            <h5 class="counter" data-number="<?php echo $glance['glanceNumber']; ?>" ></h5>
+            <span><?php echo $glance['glanceName']; ?></span>
          </div>
-         <div class="col-lg-2 col-md-4 col-xs-6 col-sm-6 col-6" id="counter-box" data-aos="flip-down">
-            <div class="icon-box-wrap">
-               <img src="images/DF Website_glance-2.png">
-               <!-- <a href="#">
-                  <i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>
-                  
-                  </a> -->
-            </div>
-            <h5 class="counter" data-number="745.69"></h5>
-            <span>Loan Disbursed (INR Crores)</span>
-         </div>
-         <div class="col-lg-2 col-md-4 col-xs-6 col-sm-6 col-6" id="counter-box" data-aos="flip-right">
-            <div class="icon-box-wrap">
-               <img src="images/DF Website_glance-3.png">
-               <!-- <a href="#">
-                  <i class="fa-brands fa-servicestack"></i>
-                  
-                  </a> -->
-            </div>
-            <h5 class="counter" data-number="8" ></h5>
-            <span>No. of States</span>
-         </div>
-         <div class="col-lg-2 col-md-4 col-xs-6 col-sm-6 col-6" id="counter-box" data-aos="flip-left">
-            <div class="icon-box-wrap">
-               <img src="images/DF Website_glance-4.png">
-               <!-- <a href="#">
-                  <i class="fa-solid fa-user"></i>
-                  
-                  </a> -->
-            </div>
-            <h5 class="counter" data-number="1001.57" ></h5>
-            <span>Gross AUM (INR Crores)</span>
-         </div>
-         <div class="col-lg-2 col-md-4 col-xs-6 col-sm-6 col-6" id="counter-box" data-aos="flip-up">
-            <div class="icon-box-wrap">
-               <img src="images/DF Website_glance-5.png">
-               <!-- <a href="#">
-                  <i class="fa-solid fa-building"></i>
-                  
-                  </a> -->
-            </div>
-            <h5 class="counter" data-number="183" ></h5>
-            <span>No. of Branches</span>
-         </div>
-         <div class="col-lg-2 col-md-4 col-xs-6 col-sm-6 col-6" id="counter-box" data-aos="flip-down">
-            <div class="icon-box-wrap">
-               <img src="images/DF Website_glance-6.png">
-               <!-- <a href="#">
-                  <i class="fa-solid fa-user"></i>
-                  
-                  </a> -->
-            </div>
-            <h5 class="counter" data-number="2067" ></h5>
-            <span>No. of Employees</span>
-         </div>
+         <?php } ?>
       </div>
    </div>
 </section>
@@ -197,57 +140,31 @@
       <div class="row pt-4 pb-4">
          <div class="col-12">
             <div class="title-wrap pt-2 pb-2">
-               <h4>Happy Customers</h4>
+               <h4><?php echo $settings['customersHeading']; ?></h4>
             </div>
             <div class="slick">
                <div class="row">
+               <?php while ($customer = mysqli_fetch_array($customersres)) { ?>
                   <div class="col-lg-5 col-md-5">
                      <div class="slider-nav pb-3">
                         <div class="testimonial-circle-img">
-                           <img src="images/test-i3-new.jpg">						
-                        </div>
-                        <div class="testimonial-circle-img">
-                           <img src="images/test-i3-new.jpg">						
-                        </div>
-                        <div class="testimonial-circle-img">
-                           <img src="images/test-i3-new.jpg">						
-                        </div>
-                        <div class="testimonial-circle-img">
-                           <img src="images/test-i3-new.jpg">						
-                        </div>
-                        <div class="testimonial-circle-img">
-                           <img src="images/test-i3-new.jpg">						
-                        </div>
-                        <div class="testimonial-circle-img">
-                           <img src="images/test-i3-new.jpg">						
+                           <img src="images/customers/<?php echo $customer['customersImage'];?>">						
                         </div>
                      </div>
                   </div>
                   <div class="col-lg-7 col-md-7">
                      <div class="slider-for">
-                     <?php while ($customer = mysqli_fetch_array($customersres)) { ?>
                         <div class="testimonial-content">
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.>
-                           </p>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                              tempor incididunt ut labore et dolore magna aliqua.
-                           </p>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                              tempor incididunt ut labore et dolore magna aliqua.
-                           </p>
+                           <?php echo $customer['customersMessage'];?>
                            <div class="customer-name-wrap pt-5">
                               <h4><?php echo $customer['customersName'];?></h4>
-                              <p>Jhunjhunu, Rajasthan</p>
+                              <p><?php echo $customer['customersPlace']; ?></p>
                            </div>
                         </div>
-                     <?php } ?>   
+                       
                      </div>
                   </div>
+                  <?php } ?> 
                </div>
             </div>
          </div>

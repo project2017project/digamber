@@ -11,4 +11,7 @@ $partnersres = $mysqli->query($partnerssql) or die( mysqli_error($mysqli));
 
 $customerssql = "select * from `customers`";
 $customersres = $mysqli->query($customerssql) or die( mysqli_error($mysqli));
+
+$glancesql = "select * from `glance`";
+$glanceres = $mysqli->query($glancesql) or die( mysqli_error($mysqli));
 ?>

@@ -89,7 +89,6 @@ IF (!isset($_SESSION['User_Name'])) {
                             <ul class="nav nav-second-level">                                
                                 <li><a href="partners.php"><i class="fa fa-flask nav_icon"></i>List</a></li>
                                 <li><a href="partnersAdd.php"><i class="fa fa-flask nav_icon"></i>Add</a></li>
-                                <li><a href="partnersEdit.php"><i class="fa fa-flask nav_icon"></i>Edit</a></li>
                             </ul>
                         </li>
                         <li>
@@ -97,7 +96,15 @@ IF (!isset($_SESSION['User_Name'])) {
                             <ul class="nav nav-second-level">                                
                                 <li><a href="customers.php"><i class="fa fa-flask nav_icon"></i>List</a></li>
                                 <li><a href="customersAdd.php"><i class="fa fa-flask nav_icon"></i>Add</a></li>
-                                <li><a href="customersEdit.php"><i class="fa fa-flask nav_icon"></i>Edit</a></li>
+                                <li><a href="customersHomeEdit.php"><i class="fa fa-flask nav_icon"></i>Title</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Glance<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">                                
+                                <li><a href="glance.php"><i class="fa fa-flask nav_icon"></i>List</a></li>
+                                <li><a href="glanceAdd.php"><i class="fa fa-flask nav_icon"></i>Add</a></li>
+                                <li><a href="glanceHomeEdit.php"><i class="fa fa-flask nav_icon"></i>Title</a></li>
                             </ul>
                         </li>
                         <li><a href="news.php"><i class="fa fa-dashboard fa-fw nav_icon"></i>News</a></li>
