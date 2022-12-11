@@ -8,4 +8,7 @@ $settings = mysqli_fetch_array($res);
 $partnerssql = "select * from `partners`";
 $partnersres = $mysqli->query($partnerssql) or die( mysqli_error($mysqli));
 //$partners = mysqli_fetch_array($partnersres);
+
+$customerssql = "select * from `customers`";
+$customersres = $mysqli->query($customerssql) or die( mysqli_error($mysqli));
 ?>

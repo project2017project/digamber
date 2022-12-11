@@ -4,7 +4,7 @@ include 'adminheader.php';
 
 <div class="container-fluid">
     <div class="main-header">
-        <h2>Partners <a href="partnersAdd.php" class="btn btn-primary pull-right">Add</a></h2>
+        <h2>customers <a href="customersAdd.php" class="btn btn-primary pull-right">Add</a></h2>
     </div>
         <div class="row">
             <div class="col-lg-12">
@@ -14,32 +14,32 @@ include 'adminheader.php';
                     <thead>
                             <tr>
                                 <th>S.No</th>
-                                <th>Patners Name</th>
-                                <th>Partners Image</th>
+                                <th>customers Name</th>
+                                <th>customers Image</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
                                 <th>S.No</th>
-                                <th>Patners Name</th>
-                                <th>Partners Image</th>
+                                <th>customers Name</th>
+                                <th>customers Image</th>
                                 <th>Action</th>
                             </tr>
                         </tfoot>
                         <tbody>
                             <?php
-                            $sql = "select * from partners";
+                            $sql = "select * from customers";
                             $res = $mysqli->query($sql);
 							$i=1;
                             while ($row = mysqli_fetch_array($res)) {
                                 ?>
                                 <tr>
                                     <td><?php echo $i; ?></td>
-                                    <td><?php echo $row['partnersName']; ?></td>
-                                    <td><img src="../images/Partners/<?php echo $row['partnersImage']; ?>"></td>
-                                    <td><a href="partnersEdit.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Edit</a>&ensp;
-									<a href="partnersDelete.php?id=<?php echo $row['id']; ?>" class="btn-danger btn">Delete</a></td>
+                                    <td><?php echo $row['customersName']; ?></td>
+                                    <td><img src="../images/customers/<?php echo $row['customersImage']; ?>"></td>
+                                    <td><a href="customersEdit.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Edit</a>&ensp;
+									<a href="customersDelete.php?id=<?php echo $row['id']; ?>" class="btn-danger btn">Delete</a></td>
                                 </tr>
                             <?php
 							$i++;

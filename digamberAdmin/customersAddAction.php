@@ -1,19 +1,19 @@
 <?php
 
 include '../dbconection/connection.php';
-$partnersName = $_POST['partnersName'];
+$customersName = $_POST['customersName'];
 $file = $_FILES['pic']['name']; 
 $mypicname = $file;
-$destination = "../images/Partners/" . $mypicname;
+$destination = "../images/customers/" . $mypicname;
 
 if (move_uploaded_file($_FILES['pic']['tmp_name'], $destination)) { 
-    $sql = "INSERT INTO `partners` (`partnersName`, `partnersImage`)"
-            . " VALUES ('" . $partnersName . "' ,'" . $mypicname . "')";
+    $sql = "INSERT INTO `customers` (`customersName`, `customersImage`)"
+            . " VALUES ('" . $customersName . "' ,'" . $mypicname . "')";
     $reg = $mysqli->query($sql);
     if ($reg >= 1) {
-        header("location:partners.php");
+        header("location:customers.php");
     } else {
-        header("location:partnersAdd.php");
+        header("location:customersAdd.php");
     }
 } else {
     echo 'Not Insert table';

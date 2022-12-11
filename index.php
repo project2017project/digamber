@@ -225,6 +225,7 @@
                   </div>
                   <div class="col-lg-7 col-md-7">
                      <div class="slider-for">
+                     <?php while ($customer = mysqli_fetch_array($customersres)) { ?>
                         <div class="testimonial-content">
                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -240,86 +241,11 @@
                               tempor incididunt ut labore et dolore magna aliqua.
                            </p>
                            <div class="customer-name-wrap pt-5">
-                              <h4>Seema Devi</h4>
+                              <h4><?php echo $customer['customersName'];?></h4>
                               <p>Jhunjhunu, Rajasthan</p>
                            </div>
                         </div>
-                        <div class="testimonial-content">
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-                           </p>
-                           <div class="customer-name-wrap pt-5">
-                              <h4>Seema Devi</h4>
-                              <p>Jhunjhunu, Rajasthan</p>
-                           </div>
-                        </div>
-                        <div class="testimonial-content">
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-                           </p>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                              tempor incididunt ut labore	
-                           </p>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                              tempor incididunt ut labore	
-                           </p>
-                           <div class="customer-name-wrap pt-5">
-                              <h4>Seema Devi</h4>
-                              <p>Jhunjhunu, Rajasthan</p>
-                           </div>
-                        </div>
-                        <div class="testimonial-content">
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut 
-                           </p>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                              tempor incididunt ut labore	
-                           </p>
-                           <div class="customer-name-wrap pt-5">
-                              <h4>Seema Devi</h4>
-                              <p>Jhunjhunu, Rajasthan</p>
-                           </div>
-                        </div>
-                        <div class="testimonial-content">
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.>
-                           </p>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                              tempor incididunt ut labore	
-                           </p>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                              tempor incididunt ut labore	
-                           </p>
-                           <div class="customer-name-wrap pt-5">
-                              <h4>Seema Devi</h4>
-                              <p>Jhunjhunu, Rajasthan</p>
-                           </div>
-                        </div>
-                        <div class="testimonial-content">
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                              proident
-                           </p>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                              tempor incididunt ut labore	
-                           </p>
-                           <div class="customer-name-wrap pt-5">
-                              <h4>Seema Devi</h4>
-                              <p>Jhunjhunu, Rajasthan</p>
-                           </div>
-                        </div>
+                     <?php } ?>   
                      </div>
                   </div>
                </div>
