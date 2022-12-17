@@ -1,0 +1,48 @@
+[10-Dec-2022 12:32:56 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/webngigs/public_html/digamber_new_2/dbconection/connection.php on line 25
+[10-Dec-2022 12:32:56 UTC] PHP Fatal error:  Uncaught Error: mysqli object is already closed in /home/webngigs/public_html/digamber_new_2/sqlquery.php:5
+Stack trace:
+#0 /home/webngigs/public_html/digamber_new_2/sqlquery.php(5): mysqli->query('select * from `...')
+#1 /home/webngigs/public_html/digamber_new_2/digamberheader.php(17): include('/home/webngigs/...')
+#2 /home/webngigs/public_html/digamber_new_2/index.php(2): include('/home/webngigs/...')
+#3 {main}
+  thrown in /home/webngigs/public_html/digamber_new_2/sqlquery.php on line 5
+[10-Dec-2022 12:33:05 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/webngigs/public_html/digamber_new_2/dbconection/connection.php on line 25
+[10-Dec-2022 12:33:05 UTC] PHP Fatal error:  Uncaught Error: mysqli object is already closed in /home/webngigs/public_html/digamber_new_2/sqlquery.php:5
+Stack trace:
+#0 /home/webngigs/public_html/digamber_new_2/sqlquery.php(5): mysqli->query('select * from `...')
+#1 /home/webngigs/public_html/digamber_new_2/digamberheader.php(17): include('/home/webngigs/...')
+#2 /home/webngigs/public_html/digamber_new_2/index.php(2): include('/home/webngigs/...')
+#3 {main}
+  thrown in /home/webngigs/public_html/digamber_new_2/sqlquery.php on line 5
+[10-Dec-2022 12:33:12 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/webngigs/public_html/digamber_new_2/dbconection/connection.php on line 25
+[10-Dec-2022 12:33:12 UTC] PHP Fatal error:  Uncaught Error: mysqli object is already closed in /home/webngigs/public_html/digamber_new_2/sqlquery.php:5
+Stack trace:
+#0 /home/webngigs/public_html/digamber_new_2/sqlquery.php(5): mysqli->query('select * from `...')
+#1 /home/webngigs/public_html/digamber_new_2/digamberheader.php(17): include('/home/webngigs/...')
+#2 /home/webngigs/public_html/digamber_new_2/index.php(2): include('/home/webngigs/...')
+#3 {main}
+  thrown in /home/webngigs/public_html/digamber_new_2/sqlquery.php on line 5
+[10-Dec-2022 13:35:55 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/webngigs/public_html/digamber_new_2/dbconection/connection.php on line 25
+[10-Dec-2022 13:35:55 UTC] PHP Fatal error:  Uncaught Error: mysqli object is already closed in /home/webngigs/public_html/digamber_new_2/sqlquery.php:5
+Stack trace:
+#0 /home/webngigs/public_html/digamber_new_2/sqlquery.php(5): mysqli->query('select * from `...')
+#1 /home/webngigs/public_html/digamber_new_2/digamberheader.php(17): include('/home/webngigs/...')
+#2 /home/webngigs/public_html/digamber_new_2/index.php(2): include('/home/webngigs/...')
+#3 {main}
+  thrown in /home/webngigs/public_html/digamber_new_2/sqlquery.php on line 5
+[10-Dec-2022 14:40:42 UTC] PHP Warning:  include(popup.php): Failed to open stream: No such file or directory in /home/webngigs/public_html/digamber_new_2/index.php on line 33
+[10-Dec-2022 14:40:42 UTC] PHP Warning:  include(): Failed opening 'popup.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/webngigs/public_html/digamber_new_2/index.php on line 33
+[10-Dec-2022 14:41:02 UTC] PHP Warning:  include(popup.php): Failed to open stream: No such file or directory in /home/webngigs/public_html/digamber_new_2/index.php on line 33
+[10-Dec-2022 14:41:02 UTC] PHP Warning:  include(): Failed opening 'popup.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/webngigs/public_html/digamber_new_2/index.php on line 33
+[10-Dec-2022 14:42:20 UTC] PHP Warning:  include(popup.php): Failed to open stream: No such file or directory in /home/webngigs/public_html/digamber_new_2/index.php on line 33
+[10-Dec-2022 14:42:20 UTC] PHP Warning:  include(): Failed opening 'popup.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/webngigs/public_html/digamber_new_2/index.php on line 33
+[10-Dec-2022 14:43:12 UTC] PHP Warning:  include(popup.php): Failed to open stream: No such file or directory in /home/webngigs/public_html/digamber_new_2/index.php on line 33
+[10-Dec-2022 14:43:12 UTC] PHP Warning:  include(): Failed opening 'popup.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/webngigs/public_html/digamber_new_2/index.php on line 33
+[10-Dec-2022 14:43:24 UTC] PHP Warning:  include(popup.php): Failed to open stream: No such file or directory in /home/webngigs/public_html/digamber_new_2/index.php on line 33
+[10-Dec-2022 14:43:24 UTC] PHP Warning:  include(): Failed opening 'popup.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/webngigs/public_html/digamber_new_2/index.php on line 33
+[10-Dec-2022 14:43:39 UTC] PHP Warning:  include(popup.php): Failed to open stream: No such file or directory in /home/webngigs/public_html/digamber_new_2/index.php on line 33
+[10-Dec-2022 14:43:39 UTC] PHP Warning:  include(): Failed opening 'popup.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/webngigs/public_html/digamber_new_2/index.php on line 33
+[10-Dec-2022 17:54:08 UTC] PHP Warning:  Undefined array key "loanHeading" in /home/webngigs/public_html/digamber_new_2/index.php on line 158
+[10-Dec-2022 17:54:08 UTC] PHP Warning:  Undefined array key "loanSubHeading" in /home/webngigs/public_html/digamber_new_2/index.php on line 159
+[10-Dec-2022 17:54:08 UTC] PHP Warning:  Undefined array key "stakeHeading" in /home/webngigs/public_html/digamber_new_2/index.php on line 338
+[10-Dec-2022 17:54:08 UTC] PHP Warning:  Undefined array key "stakeMessage" in /home/webngigs/public_html/digamber_new_2/index.php on line 339
