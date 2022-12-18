@@ -20,6 +20,9 @@ $customersres = $mysqli->query($customerssql) or die( mysqli_error($mysqli));
 $pictorialsql = "select * from `pictorial`";
 $pictorialres = $mysqli->query($pictorialsql) or die( mysqli_error($mysqli));
 
+$loanssql = "select * from `loans`";
+$loansres = $mysqli->query($loanssql) or die( mysqli_error($mysqli));
+
 $glancesql = "select * from `glance`";
 $glanceres = $mysqli->query($glancesql) or die( mysqli_error($mysqli));
 ?>

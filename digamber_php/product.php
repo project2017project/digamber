@@ -27,21 +27,17 @@
 
 
 <!-- ======= product text content start === -->
-
 <div class="container product-p-text-content pt-5 pb-5">
     <div class="row">
         <div class="col-12 pt-1"><?php echo $settings2['aboutMessage']; ?></div>
     </div>
 </div>
 <!-- ======= product text content end === -->
-
-
 <!-- ===== product loan start ====== -->
 <section class="loans-new-wrapper pt-3">
     <div class="container pt-5 pb-5">
         <div class="row loans-top-row">
             <div class="col-lg-6 col-md-6 loans-new-back-img" style="background-image:url('../images/Home_Loan/<?php echo $settings2['loanImage1']; ?>');">
-
             </div>
             <div class="col-lg-6 col-md-6 micro-content-wrap">
                 <div class="micro-new-content">
@@ -54,18 +50,14 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
         <div class="row loans-next-row pb-4">
             <div class="col-lg-6 col-md-6 retail-content-wrap">
                 <div class="micro-new-content second">
 				<h4><?php echo $settings2['loanHeading2']; ?></h4>
                <?php echo $settings2['loanMessage2']; ?>
                     <div class="micro-new-btn">
-                        <a href="javascript:void(0)" class="productloan2-readmore-btn-click">Explore
-                            <img src="../images/d-logo-cut-2.png">
-                        </a>
+                        <a href="javascript:void(0)" class="productloan2-readmore-btn-click">Explore<img src="../images/d-logo-cut-2.png"></a>
                     </div>
                 </div>
             </div>
@@ -74,12 +66,10 @@
         </div>
     </div>
 </section>
-
 <!-- ===== product loan end ====== -->
 
 
 <!-- ==== product table start ======  -->
-
 <div class="journey-back-wrap" style="background-image: url('../images/DF Website_background-2.jpg');">
     <div class="product-table-wrap pt-4 pb-5">
         <div class="container table-responsive py-5">
@@ -93,53 +83,18 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php while ($loans = mysqli_fetch_array($loansres)) { ?>
                         <tr>
-                            <th scope="row">No. of Member</th>
-                            <td>5-20</td>
-                            <td>1</td>
+                            <th scope="row"><?php echo $loans['loansName']; ?></th>
+                            <td><?php echo $loans['JLGLoan']; ?></td>
+                            <td><?php echo $loans['IMLLoan']; ?></td>
                         </tr>
-                        <tr>
-                            <th scope="row">Borrower</th>
-                            <td>Women</td>
-                            <td>Anyone</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Loan Amount</th>
-                            <td>Upto 60,000/-</td>
-                            <td>Upto 1,00,000/-</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Rate of Interest</th>
-                            <td>25% - 27%</td>
-                            <td>25% - 28%</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Processing Fees</th>
-                            <td>1%</td>
-                            <td>2%</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Tenure</th>
-                            <td>Upto 36 Months</td>
-                            <td>Upto 36 Months</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Repayment Frequency</th>
-                            <td>Monthly/Fortnightly</td>
-                            <td>Monthly/Fortnightly</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Insurance Charges</th>
-                            <td>Actual</td>
-                            <td>Actual</td>
-                        </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
             <div class="about-new-btn float-wrap">
-                <a href="javascript:void(0)" id="show-table">Click Here To Read More
-                    <img src="../images/white-de.png">
-                </a>
+                <a href="javascript:void(0)" id="show-table">Click Here To Read More<img src="../images/white-de.png"></a>
             </div>
         </div>
     </div>

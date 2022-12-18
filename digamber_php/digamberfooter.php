@@ -94,6 +94,9 @@ $(document).ready(function() {
     $(".cross-popup-hide").click(function() {
         $(".same-digamber-popup").hide();
     });
+	$("#show-table").click(function(){
+        $(".fixed-height-wrap").toggleClass("show-height");
+    });
 });
 </script>
 <script>
