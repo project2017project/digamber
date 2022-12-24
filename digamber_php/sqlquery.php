@@ -10,6 +10,11 @@ $sql2 = "select * from `settings` where id='" . $c_id2 . "'";
 $res2 = $mysqli->query($sql2) or die( mysqli_error($mysqli));
 $settings2 = mysqli_fetch_array($res2);
 
+$c_id2 = 3;
+$contactsql = "select * from `settings` where id='" . $c_id2 . "'";
+$contactres = $mysqli->query($contactsql) or die( mysqli_error($mysqli));
+$contactsettings = mysqli_fetch_array($contactres);
+
 $partnerssql = "select * from `partners`";
 $partnersres = $mysqli->query($partnerssql) or die( mysqli_error($mysqli));
 //$partners = mysqli_fetch_array($partnersres);

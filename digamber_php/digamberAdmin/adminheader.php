@@ -130,6 +130,15 @@ IF (!isset($_SESSION['User_Name'])) {
                                 <li><a href="glanceHomeEdit.php"><i class="fa fa-flask nav_icon"></i>Title</a></li>
                             </ul>
                         </li>
+                        <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Contact<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="contactGetInTouchEdit.php"><i class="fa fa-flask nav_icon"></i>Get In Touch</a></li>
+                                <li><a href="contactCustomerGrievanceEdit.php"><i class="fa fa-flask nav_icon"></i>Customer Grievance</a></li>
+                                <li><a href="contactGetInTouchList.php"><i class="fa fa-flask nav_icon"></i>Get In Touch List</a></li>
+                                <li><a href="contactCustomerGrievanceList.php"><i class="fa fa-flask nav_icon"></i>Customer Grievance List</a></li>
+                            </ul>
+                        </li>
                         <li><a href="news.php"><i class="fa fa-dashboard fa-fw nav_icon"></i>News</a></li>
                         <li><a href="competencies-type.php"><i
                                     class="fa fa-dashboard fa-fw nav_icon"></i>Compentency</a></li>

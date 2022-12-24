@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php include 'digamberheader.php'; ?>
 <?php include 'popup.php';?>
 <!-- ======== banner start ===== -->
