@@ -12,7 +12,7 @@ $settings = mysqli_fetch_array($res);
                 <div class="main-header"><h2>Edit Contact Infomation</h2></div>
                 <div class="table-responsive">
                     <table id="tbl" class="display table table-bordered table-hover table-striped">
-                        <form action="contactGetInTouchListAction.php" method="post" enctype="multipart/form-data">
+                        <form action="contactCustomerGrievanceEditAction.php" method="post" enctype="multipart/form-data">
                             <tbody>                                
                                 <tr>
                                     <td>Customer Grievance Officer</td>
