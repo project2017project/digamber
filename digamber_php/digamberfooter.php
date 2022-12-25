@@ -73,7 +73,7 @@
 <script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
 <script type="text/javascript" src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="../vendor/slick/slick.min.js"></script>
-<script src="../aos/aos.js"></script>
+<script type="text/javascript" src="../aos/aos.js"></script>
 <script>
 $(document).ready(function() {
     $(".readmore-btn-click").click(function() {
@@ -94,8 +94,26 @@ $(document).ready(function() {
     $(".cross-popup-hide").click(function() {
         $(".same-digamber-popup").hide();
     });
-	$("#show-table").click(function(){
+    $("#show-table").click(function() {
         $(".fixed-height-wrap").toggleClass("show-height");
+    });
+});
+</script>
+<script>
+$(document).ready(function() {
+    $(".name-click").click(function() {
+        $(".board-candidate-wrapper").show();
+    });
+    $(".cross-popup-hide").click(function() {
+        $(".board-candidate-wrapper").hide();
+    });
+});
+</script>
+<script>
+$(document).ready(function() {
+    $('.tabs-wrap ul li a').click(function() {
+        $('li a').removeClass("active");
+        $(this).addClass("active");
     });
 });
 </script>
@@ -105,176 +123,87 @@ $('.partners').slick({
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    responsive: [
-        {
-
+    responsive: [{
             breakpoint: 991,
-
             settings: {
-
                 slidesToShow: 4,
-
             }
-
         },
-
         {
-
             breakpoint: 767,
-
             settings: {
-
                 slidesToShow: 2,
-
             }
-
-
-
         }
-
-
-
-
-
     ]
-
 });
 </script>
-
-
-
 <script>
 $('.slider-for').slick({
-
     slidesToShow: 1,
-
     slidesToScroll: 1,
-
     arrows: false,
-
     fade: true,
-
     asNavFor: '.slider-nav'
-
 });
-
 $('.slider-nav').slick({
-
     slidesToShow: 1,
-
     slidesToScroll: 1,
-
     asNavFor: '.slider-for',
-
     dots: true,
-
     centerMode: true,
-
     centerPadding: 0,
-
     focusOnSelect: true
-
 });
 </script>
-
-
-
 <script>
 $('.autoplay').slick({
-
     slidesToShow: 1,
-
     slidesToScroll: 1,
-
     dots: true,
-
     autoplay: true,
-
     autoplaySpeed: 2000,
-
-    responsive: [
-
-        {
-
+    responsive: [{
             breakpoint: 991,
-
             settings: {
-
                 slidesToShow: 1,
-
             }
-
         },
-
         {
-
             breakpoint: 767,
-
             settings: {
-
                 slidesToShow: 1,
-
             }
-
-
-
         }
-
-
-
-
-
     ]
-
 });
 </script>
-
-
-
 <script>
 var a = 0;
-
 $(window).scroll(function() {
-
     var oTop = $("#counter-box").offset().top - window.innerHeight;
-
     if (a == 0 && $(window).scrollTop() > oTop) {
-
         $(".counter").each(function() {
-
             var $this = $(this),
-
                 countTo = $this.attr("data-number");
-
             $({
-
                 countNum: $this.text()
-
-            }).animate(
-
-                {
-
-                    countNum: countTo
-
+            }).animate({
+                countNum: countTo
+            }, {
+                duration: 4000,
+                easing: "swing",
+                step: function() {
+                    $this.text(
+                        Math.ceil(this.countNum).toLocaleString("en")
+                    );
                 },
-
-
-
-                {
-                    duration: 4000,
-                    easing: "swing",
-                    step: function() {
-                        $this.text(
-                            Math.ceil(this.countNum).toLocaleString("en")
-                        );
-                    },
-                    complete: function() {
-                        $this.text(
-                            Math.ceil(this.countNum).toLocaleString("en")
-                        );
-                    }
+                complete: function() {
+                    $this.text(
+                        Math.ceil(this.countNum).toLocaleString("en")
+                    );
                 }
-            );
+            });
         });
         a = 1;
     }
@@ -289,6 +218,24 @@ $(document).keydown(function(event) {
 </script>
 <script>
 AOS.init();
+</script>
+<script>
+$('.single-innovation-item').slick({
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: false,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+});
+</script>
+<script>
+$('.single-corner-slide').slick({
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: true,
+    dots: false,
+});
 </script>
 </body>
 

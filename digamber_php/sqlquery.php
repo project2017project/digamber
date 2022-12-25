@@ -31,8 +31,19 @@ $loansres = $mysqli->query($loanssql) or die( mysqli_error($mysqli));
 $glancesql = "select * from `glance`";
 $glanceres = $mysqli->query($glancesql) or die( mysqli_error($mysqli));
 
-$investorssql = "select * from investors JOIN investorstype ON investorstype.id = investors.investorsType";
+$investorssql = "select * from investors LEFT JOIN investorstype ON investorstype.id = investors.investorsType";
 $investorsres = $mysqli->query($investorssql);
 $investors = mysqli_fetch_all($investorsres);
 
+$financesql = "select * from `finance`";
+$financeres = $mysqli->query($financesql) or die( mysqli_error($mysqli));
+
+$testinomialsql = "select * from `testinomial`";
+$testinomialres = $mysqli->query($testinomialsql) or die( mysqli_error($mysqli));
+
+$jobsql = "select * from `job`";
+$jobres = $mysqli->query($jobsql) or die( mysqli_error($mysqli));
+// echo "<pre>";
+// print_r($investors);
+// die;
 ?>

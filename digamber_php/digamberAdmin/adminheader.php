@@ -116,6 +116,27 @@ IF (!isset($_SESSION['User_Name'])) {
                             </ul>
                         </li>
                         <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Finance<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">                                
+                                <li><a href="finance.php"><i class="fa fa-flask nav_icon"></i>List</a></li>
+                                <li><a href="financeAdd.php"><i class="fa fa-flask nav_icon"></i>Add</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Testinomial<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">                                
+                                <li><a href="testinomial.php"><i class="fa fa-flask nav_icon"></i>List</a></li>
+                                <li><a href="testinomialAdd.php"><i class="fa fa-flask nav_icon"></i>Add</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Job<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">                                
+                                <li><a href="job.php"><i class="fa fa-flask nav_icon"></i>List</a></li>
+                                <li><a href="jobAdd.php"><i class="fa fa-flask nav_icon"></i>Add</a></li>
+                            </ul>
+                        </li>
+                        <li>
                             <a href="#"><i class="fa fa-laptop nav_icon"></i>loans<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">                                
                                 <li><a href="loans.php"><i class="fa fa-flask nav_icon"></i>List</a></li>
@@ -151,6 +172,12 @@ IF (!isset($_SESSION['User_Name'])) {
                             <ul class="nav nav-second-level">                                
                                 <li><a href="investors.php"><i class="fa fa-dashboard fa-fw nav_icon"></i>List</a></li>
                                 <li><a href="investorsAdd.php"><i class="fa fa-flask nav_icon"></i>Add</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Career<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="enquiryList.php"><i class="fa fa-flask nav_icon"></i>Enquiry</a></li>
                             </ul>
                         </li>
                         
