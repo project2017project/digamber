@@ -16,7 +16,7 @@ define('DB_USER', 'root');
 
 define('DB_PASS', '');
 
-define('DB_NAME', 'digamber');
+define('DB_NAME', 'webngigs_digamber');
 
 define('SITEURL', 'http://www.feedback.org/');
 

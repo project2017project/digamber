@@ -1,7 +1,7 @@
 <?php
 include 'adminheader.php';
 $c_id = $_REQUEST['id'];
-$sql = "select * from `competencies` where id='" . $c_id . "'";
+$sql = "select * from `investors` where id='" . $c_id . "'";
 $res = $mysqli->query($sql);
 $data = mysqli_fetch_array($res);
 //echo $data;
@@ -9,24 +9,29 @@ $data = mysqli_fetch_array($res);
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <div class="main-header">
-                    <h2>Edit Compentency</h2>
-                </div>
+                <div class="main-header"><h2>Edit Investors</h2></div>
                 <div class="table-responsive">
                     <table  id="tbl"  class="display table table-bordered table-hover table-striped">
-                        <form action="Edit-news-action.php" method="post" name="loginform" enctype="multipart/form-data">
+                        <form action="investorsEditAction.php" method="post">
                              <tbody>
-                             <tr class="active">
-                                    <td>Compentency Type</td>
+                                <tr>
+                                    <td>Investors Name</td>
                                     <td>
-										<select name="conpentencytype">
-											<option >Select Any Compentency Type</option>
+                                        <input type="text" name='investorsName' value="<?php echo $data['investorsName'];?>">
+                                    </td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Investors Type</td>
+                                    <td>
+										<select name="investorstype">
+											<option >Select Any Investors Type</option>
                                             <?php
-                                            $sql = "select * from competencies_type";
+                                            $sql = "select * from investorstype";
                                             $res = $mysqli->query($sql);
                                             while ($row = mysqli_fetch_array($res)) {
                                                 ?>
-                                                <option value="<?php echo $row['id']; ?>" <?php if($data['competencies_type_id']==$row['id']){echo "selected";}?>><?php echo $row['competencies_type_name']; ?></option>
+                                                <option value="<?php echo $row['id']; ?>" <?php if($data['investorsType']==$row['id']){echo "selected";}?>>
+                                                <?php echo $row['investorsTypeName']; ?></option>
                                             <?php
                                             } ?>
 										</select>								
@@ -37,16 +42,11 @@ $data = mysqli_fetch_array($res);
                                         
                                 <tr>
                                     <td>Description</td>
-                                    <td class="iconsetadmin">
-                                        <textarea name='description' class="ckeditor"><?php echo $data['description'];?></textarea>
+                                    <td>
+                                        <textarea class="ckeditor" name='investorsMessgae'><?php echo $data['investorsMessgae'];?></textarea>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>Description Review</td>
-                                    <td class="iconsetadmin">
-                                        <textarea name='description_review' class="ckeditor"><?php echo $data['description_review'];?></textarea>
-                                    </td>
-                                </tr>
+                                
                                 <tr class="danger">
                                     <td colspan="2" align="center"><input type="submit" class="btn-danger btn"></td>
 

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<php>
-
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="../fonts/fontawesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="../aos/aos.css">
 </head>
-
 <body>
     <?php include 'sqlquery.php'; ?>
     <!-- ===== Top Head  Start ==== -->
@@ -39,62 +37,29 @@
                             </button>
                             <div class="collapse navbar-collapse" id="mynavbar">
                                 <ul class="navbar-nav ms-auto">
-                                    <!-- <li class="nav-item">
-                           <a class="nav-link" href="#">Vision & Mission</a>
-                           
-                           </li> -->
                                     <li class="nav-item investor-menu-wrap">
                                         <a class="nav-link" href="about.php">About Us</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="product.php">Products</a>
                                     </li>
-                                    <li class="nav-item investor-menu-wrap">
-                                        <a class="nav-link" href="investor.php">Investors Relations</a>
+                                    <li class="nav-item investor-menu-wrap small-width-menu">
+                                        <a class="nav-link" href="javascript:void(0)">Investors Relations</a>
                                         <ul class="investor-sub-menu column-3">
                                             <div class="row">
-                                                <div class="col-sm-4">
+                                                <div class="col-12">
                                                     <ul class="multi-column">
-                                                        <li><a href="#financial-section">Financial Statements</a></li>
-                                                        <li><a href="#credit-section">Credit Rating</a></li>
-                                                        <li><a href="#annual-section">Annual Reports</a></li>
-                                                        <li><a href="#corporate-setion">Corporate announcements</a></li>
-                                                        <li><a href="#general-section">General Meetings</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <ul class="multi-column">
-                                                        <li><a href="#code-section">Code & Policies</a></li>
-                                                        <li><a href="#mfi-section">Mfi Grading</a></li>
-                                                        <li><a href="#director-section">Director Familiarization</a>
+                                                        <li><a href="disclosure.php">DISCLOSURE UNDER REGULATION</a>
                                                         </li>
-                                                        <li><a href="#">Annual Returns</a></li>
-                                                        <li><a href="#">Debenture Trustees</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <ul class="multi-column">
-                                                        <li><a href="#">Investor Queries</a></li>
-                                                        <li><a href="#">Disclosure Under Regulation</a></li>
-                                                        <li><a href="#">Growth Partners</a></li>
-                                                        <li><a href="#">Privacy Policy</a></li>
+                                                        <li><a href="annual.php">Annual Report</a></li>
+                                                        <li><a href="code.php">Code & Policies</a></li>
+                                                        <li><a href="growth.php">Growth Partners</a></li>
+                                                        <li><a href="corporate.php">Corporate Governance</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </ul>
                                     </li>
-                                    <!-- <li class="nav-item">
-                           <a class="nav-link" href="#">Partners</a>
-                           
-                           </li>
-                           
-                           
-                           
-                           <li class="nav-item">
-                           
-                           <a class="nav-link" href="#">Customer Stories</a>
-                           
-                           </li> -->
                                     <li class="nav-item investor-menu-wrap small-width-menu">
                                         <a class="nav-link" href="career.php">Careers</a>
                                         <ul class="investor-sub-menu column-3">

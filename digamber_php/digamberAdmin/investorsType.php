@@ -1,7 +1,7 @@
 <?php include 'adminheader.php'; ?>
 <div class="container-fluid">
     <div class="main-header">
-        <h2>Compentency Type <a href="competencies-type-add.php" class="btn btn-primary pull-right">Add</a></h2>
+        <h2>Investors Type <a href="investorsTypeAdd.php" class="btn btn-primary pull-right">Add</a></h2>
     </div>
         <div class="row">
             <div class="col-lg-12">                               
@@ -11,7 +11,7 @@
                         <tfoot><tr><th>S.No</th><th>Name</th><th>Created At</th><th>Action</th></tr></tfoot>
                         <tbody>
                             <?php
-                            $sql = "select * from competencies_type";
+                            $sql = "select * from investorstype";
                             //echo $sql;exit;
                             $res = $mysqli->query($sql);
 							$i=1;
@@ -19,11 +19,11 @@
                                 ?>
                                 <tr>
                                     <td><?php echo $i; ?></td>
-                                    <td><?php echo $row['competencies_type_name']; ?></td>
-									<td><?php echo $row['created']; ?></td>
-                                    <td align="center">
-                                        <a href="competencies-type-edit.php?id=<?php echo $row['id']; ?>" class="btn-danger btn">Edit</a>
-                                        <a href="competencies-type-delete.php?id=<?php echo $row['id']; ?>" class="btn-danger btn">Delete</a>
+                                    <td><?php echo $row['investorsTypeName']; ?></td>
+									<td><?php echo $row['created_at']; ?></td>
+                                    <td>
+                                        <a href="investorsTypeEdit.php?id=<?php echo $row['id']; ?>" class="btn-danger btn">Edit</a>
+                                        <a href="investorsTypeDelete.php?id=<?php echo $row['id']; ?>" class="btn-danger btn">Delete</a>
                                     </td>
                                 </tr>
                             <?php

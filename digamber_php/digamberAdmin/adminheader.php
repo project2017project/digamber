@@ -139,9 +139,21 @@ IF (!isset($_SESSION['User_Name'])) {
                                 <li><a href="contactCustomerGrievanceList.php"><i class="fa fa-flask nav_icon"></i>Customer Grievance List</a></li>
                             </ul>
                         </li>
-                        <li><a href="news.php"><i class="fa fa-dashboard fa-fw nav_icon"></i>News</a></li>
-                        <li><a href="competencies-type.php"><i
-                                    class="fa fa-dashboard fa-fw nav_icon"></i>Compentency</a></li>
+                        <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Investors Type<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">                                
+                                <li><a href="investorsType.php"><i class="fa fa-dashboard fa-fw nav_icon"></i>List</a></li>
+                                <li><a href="investorsTypeAdd.php"><i class="fa fa-flask nav_icon"></i>Add</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Investor<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">                                
+                                <li><a href="investors.php"><i class="fa fa-dashboard fa-fw nav_icon"></i>List</a></li>
+                                <li><a href="investorsAdd.php"><i class="fa fa-flask nav_icon"></i>Add</a></li>
+                            </ul>
+                        </li>
+                        
                         <li><a href="reviewerslist.php"><i class="fa fa-dashboard fa-fw nav_icon"></i>Reviewers</a></li>
                     </ul>
                 </div>

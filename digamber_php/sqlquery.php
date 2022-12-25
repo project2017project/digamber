@@ -30,4 +30,9 @@ $loansres = $mysqli->query($loanssql) or die( mysqli_error($mysqli));
 
 $glancesql = "select * from `glance`";
 $glanceres = $mysqli->query($glancesql) or die( mysqli_error($mysqli));
+
+$investorssql = "select * from investors JOIN investorstype ON investorstype.id = investors.investorsType";
+$investorsres = $mysqli->query($investorssql);
+$investors = mysqli_fetch_all($investorsres);
+
 ?>
