@@ -74,6 +74,7 @@
 <script type="text/javascript" src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="../vendor/slick/slick.min.js"></script>
 <script type="text/javascript" src="../aos/aos.js"></script>
+<script type="text/javascript" src="../vendor/maps.js"></script>
 <script>
 $(document).ready(function() {
     $(".readmore-btn-click").click(function() {
@@ -237,6 +238,79 @@ $('.single-corner-slide').slick({
     dots: false,
 });
 </script>
+
+<script>
+$(document).ready(function(e) {
+    $('img[usemap]').rwdImageMaps();
+    $("#jandk").mouseenter(function() {
+        $(".jandk").addClass("show");
+    }).mouseleave(function() {
+        $(".jandk").removeClass("show");
+    });
+});
+</script>
+<script>
+$(document).ready(function() {
+    $(".culture-click").click(function() {
+        $(".culture-popup-wrapper").show();
+    });
+    $(".cross-popup-hide").click(function() {
+        $(".culture-popup-wrapper").hide();
+    });
+});
+$(document).ready(function() {
+    $(".mission-vision-click").click(function() {
+        $(".mission-vision-wrapper").show();
+    });
+    $(".cross-popup-hide").click(function() {
+        $(".mission-vision-wrapper").hide();
+    });
+});
+</script>
+<script>
+$('.autoplay').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [{
+            breakpoint: 1300,
+            settings: {
+                slidesToShow: 4,
+            }
+        },
+        {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
+});
+</script>
+<script>
+$(document).ready(function() {
+    $('ul li a').click(function() {
+        $('li a').removeClass("active");
+        $(this).addClass("active");
+    });
+});
+</script>
+<style>
+img[usemap] {
+    border: none;
+    height: auto;
+    max-width: 100%;
+    width: 630px;
+}
+</style>
 </body>
 
 </html>
