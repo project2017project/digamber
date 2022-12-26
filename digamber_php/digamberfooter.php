@@ -80,6 +80,9 @@ $(document).ready(function() {
     $(".readmore-btn-click").click(function() {
         $("#md-message").show();
     });
+    $(".about-readmore-btn-click").click(function() {
+        $("#about-message").show();
+    });
     $(".loan-readmore-btn-click").click(function() {
         $("#loan1").show();
     });

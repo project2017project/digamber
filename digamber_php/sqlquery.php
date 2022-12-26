@@ -15,6 +15,11 @@ $contactsql = "select * from `settings` where id='" . $c_id2 . "'";
 $contactres = $mysqli->query($contactsql) or die( mysqli_error($mysqli));
 $contactsettings = mysqli_fetch_array($contactres);
 
+$c_id2 = 4;
+$aboutsql = "select * from `settings` where id='" . $c_id2 . "'";
+$aboutres = $mysqli->query($aboutsql) or die( mysqli_error($mysqli));
+$aboutsettings = mysqli_fetch_array($aboutres);
+
 $partnerssql = "select * from `partners`";
 $partnersres = $mysqli->query($partnerssql) or die( mysqli_error($mysqli));
 //$partners = mysqli_fetch_array($partnersres);
@@ -40,6 +45,9 @@ $financeres = $mysqli->query($financesql) or die( mysqli_error($mysqli));
 
 $testinomialsql = "select * from `testinomial`";
 $testinomialres = $mysqli->query($testinomialsql) or die( mysqli_error($mysqli));
+
+$culturevaluesql = "select * from `culturevalue`";
+$culturevalueres = $mysqli->query($culturevaluesql) or die( mysqli_error($mysqli));
 
 $jobsql = "select * from `job`";
 $jobres = $mysqli->query($jobsql) or die( mysqli_error($mysqli));

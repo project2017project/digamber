@@ -6,19 +6,10 @@
     <div class="row">
         <div class="col-lg-6 col-md-6 pt-3 pb-3">
             <div class="new-abo-content pr-3 pt-3">
-                <h3>Digamber Finance</h3>
-                <p class="ext-pragraph-sty">Digamber Capfin Ltd (DCL) started operations as an NBFC in 1995 with the
-                    mission of providing a range of financial services to thr population who are not adequately served
-                    by financial institutions. We were the first institution in Rajasthan who provides financial
-                    services into rural areas, our focus was on the remaining 70% of the populations who lives in
-                    villages and does not have foraml credit access. The main products were vehicle financing, farmer's
-                    cerdit, and small business loans. As we were expert in rural credit and microfinance is the best way
-                    to help them further so after 2009 we changes our RBI classification from Asset finance Company to
-                    NBFC- Microfinance Institution.</p>
-
-
+                <h3><?php echo $aboutsettings['aboutHeading'];?></h3>
+                <p class="ext-pragraph-sty"><?php echo $aboutsettings['aboutMessage']; ?></p>
                 <div class="about-new-btn">
-                    <a href="javascript:void(0)" class="readmore-btn-click">Click Here To Read More
+                    <a href="javascript:void(0)" class="about-readmore-btn-click">Click Here To Read More
                         <img src="../images/d-logo-cut-2.png">
                     </a>
                 </div>
@@ -26,7 +17,7 @@
         </div>
         <div class="col-lg-6 col-md-6 pt-3 pb-3">
             <div class="new-abo-image mb-4">
-                <img src="../images/DF-about-banner.gif">
+                <img src="../images/about/<?php echo $aboutsettings['aboutImage']; ?>">
             </div>
         </div>
     </div>
@@ -37,30 +28,25 @@
     <div class="container pt-5 pb-5">
         <div class="row">
             <div class="col-lg-2 col-md-2">
-                <div class="mission-vision-../images">
-                    <img src="../images/vision-ar-new-1.png">
+                <div class="mission-vision-images">
+                    <img src="../images/about/<?php echo $aboutsettings['loanImage1']; ?>">
                 </div>
             </div>
             <div class="col-lg-10 col-md-10">
                 <div class="mission-vision-content">
-                    <h2>Vision</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris </p>
+                    <h2><?php echo $aboutsettings['loanHeading']; ?></h2>
+                    <p><?php echo $aboutsettings['loanSubHeading']; ?></p>
                 </div>
             </div>
-
             <div class="col-lg-2 col-md-2 pt-5">
-                <div class="mission-vision-../images">
-                    <img src="../images/mission-ar-new-2.png">
+                <div class="mission-vision-images">
+                    <img src="../images/about/<?php echo $aboutsettings['loanImage2']; ?>">
                 </div>
             </div>
             <div class="col-lg-10 col-md-10 pt-5">
                 <div class="mission-vision-content">
-                    <h2>Mission</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris </p>
+                    <h2><?php echo $aboutsettings['loanHeading2']; ?></h2>
+                    <?php echo $aboutsettings['loanMessage2']; ?>
                 </div>
             </div>
             <div class="about-new-btn about-white-wrap">
@@ -73,46 +59,25 @@
             <div class="col-12">
                 <div class="row">
                     <div class="col-md-4 cul-dot-left">
-                        <!-- 	<div class="dot-1">					
-				</div>
-				<div class="dot-2">	
-				</div>
-				<div class="dot-3">			
-				</div> -->
+                        
+                    <?php 
+                    $i=0;
+                    while ($culturevalue = mysqli_fetch_array($culturevalueres)) { ?>
                         <div class="culture-content-wrap">
                             <div class="head-content">
                                 <a href="javascript:void(0)" class="culture-click">
-                                    <h3>Customer Life</h3>
+                                    <h3><?php echo $culturevalue['name'];?></h3>
                                 </a>
                             </div>
                             <div class="icon-box">
-                                <img src="../images/culture-icon-1.png">
+                                <img src="../images/culturevalue/<?php echo $culturevalue['image'];?>">
                             </div>
                         </div>
-                        <div class="culture-content-wrap">
-                            <div class="head-content">
-                                <a href="javascript:void(0)" class="culture-click">
-                                    <h3>Transparency Of Information</h3>
-                                </a>
-                            </div>
-                            <div class="icon-box">
-                                <img src="../images/search-n-fu-ic.png">
-                            </div>
+                        <?php
+                            if ($i == 2){
+                        ?>
                         </div>
-
-
-                        <div class="culture-content-wrap">
-                            <div class="head-content">
-                                <a href="javascript:void(0)" class="culture-click">
-                                    <h3>Equality</h3>
-                                </a>
-                            </div>
-                            <div class="icon-box">
-                                <img src="../images/equ-2n.png">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 cul-dot-left">
+                        <div class="col-md-4 cul-dot-left">
                         <div class="culture-circle-new-wrap">
                             <h4>Culture & Values</h4>
                             <div class="yellow-dot-left">
@@ -128,232 +93,14 @@
                         </div>
                     </div>
                     <div class="col-md-4 cul-dot-left">
-                        <!-- 	<div class="dot-1"></div>
-				<div class="dot-2"></div>
-				<div class="dot-3"></div> -->
-
-                        <div class="culture-content-wrap">
-                            <div class="head-content">
-                                <a href="javascript:void(0)" class="culture-click">
-                                    <h3>Integrity</h3>
-                                </a>
-                            </div>
-                            <div class="icon-box">
-                                <img src="../images/inte-2n.png">
-                            </div>
-
-
-                        </div>
-                        <div class="culture-content-wrap">
-                            <div class="head-content">
-                                <a href="javascript:void(0)" class="culture-click">
-                                    <h3>Adhere With Laws And regulations</h3>
-                                </a>
-                            </div>
-                            <div class="icon-box">
-                                <img src="../images/laws-2n-final.png">
-                            </div>
-
-
-                        </div>
-
-
-                        <div class="culture-content-wrap">
-                            <div class="head-content">
-                                <a href="javascript:void(0)" class="culture-click">
-                                    <h3>Employee Engagement</h3>
-                                </a>
-                            </div>
-                            <div class="icon-box">
-                                <img src="../images/employee-2n-final11.png">
-                            </div>
-
-
-                        </div>
+                        <?php
+                            }
+                            $i++;
+                         } ?>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- 	
-	<div class="row mt-5 pt-5 pb-5">
-	<div class="col-12 culture-rules-wrapper">
-		<div class="culture-text">
-			<div class="cul-dot-center">
-			<h4>Culture <br>& Values</h4>
-		</div>
-			<div class="cul-dot-left">
-				<div class="dot-1">					
-				</div>
-				<div class="dot-2">	
-				</div>
-				<div class="dot-3">			
-				</div>
-				<div class="culture-content-wrap">
-					<div class="head-content">
-						<a href="javascript:void(0)" class="culture-click">
-						<h3>Transparency <br>Of Information</h3>
-						</a>
-						</div>
-						<div class="icon-box">
-							<img src="../images/search-n-fu-ic.png">
-						</div>
-					</div>
-				
-					<div class="culture-content-wrap">
-					<div class="head-content">
-						<a href="javascript:void(0)" class="culture-click">
-						<h3>Customer Life</h3>
-					</a>
-						</div>
-						<div class="icon-box">
-							<img src="../images/culture-icon-1.png">
-						</div>
-					</div>
-				
-					<div class="culture-content-wrap">
-					<div class="head-content">
-						<a href="javascript:void(0)" class="culture-click">
-						<h3>Equality</h3>
-					</a>
-						</div>
-						<div class="icon-box">
-							<img src="../images/equ-2n.png">
-						</div>
-					</div>
-			</div>
-				<div class="cul-dot-right">
-				<div class="dot-1"></div>
-				<div class="dot-2"></div>
-				<div class="dot-3"></div>
-				<div class="culture-content-wrap">
-					<div class="head-content">
-						<a href="javascript:void(0)" class="culture-click">
-						<h3>Adhere With Laws<br> And regulations</h3>
-					</a>
-						</div>
-					<div class="icon-box">
-							<img src="../images/laws-2n-final.png">
-						</div>
-					
-						
-				</div>
-				
-				<div class="culture-content-wrap">
-					<div class="head-content">
-						<a href="javascript:void(0)" class="culture-click">
-						<h3>Integrity</h3>
-					</a>
-						</div>
-					<div class="icon-box">
-							<img src="../images/inte-2n.png">
-						</div>
-					
-						
-					</div>
-				
-				<div class="culture-content-wrap">
-					<div class="head-content">
-						<a href="javascript:void(0)" class="culture-click">
-						<h3>Employee<br>Engagement/Friendly</h3>
-					</a>
-						</div>
-					<div class="icon-box">
-							<img src="../images/employee-2n-final11.png">
-						</div>
-					
-						
-					</div>
-			</div>
-		</div>
-	</div>
-</div>
- -->
-        <!-- <div class="row mt-5 pt-5 pb-5">
-	<div class="col-12 culture-rules-wrapper">
-		<div class="culture-text">
-			<h4>Culture <br>& Values</h4>
-			<div class="cul-dot-left">
-				<div class="dot-1">					
-				</div>
-				<div class="culture-content-wrap">
-					<div class="head-content">
-						<a href="javascript:void(0)" class="culture-click">
-						<h3>Transparency <br>Of Information</h3>
-						</a>
-						</div>
-						<div class="icon-box">
-							<img src="../images/search-n-fu-ic.png">
-						</div>
-					</div>
-				<div class="dot-2">	
-				</div>
-					<div class="culture-content-wrap">
-					<div class="head-content">
-						<a href="javascript:void(0)" class="culture-click">
-						<h3>Customer Life</h3>
-					</a>
-						</div>
-						<div class="icon-box">
-							<img src="../images/culture-icon-1.png">
-						</div>
-					</div>
-				<div class="dot-3">			
-				</div>
-					<div class="culture-content-wrap">
-					<div class="head-content">
-						<a href="javascript:void(0)" class="culture-click">
-						<h3>Equality</h3>
-					</a>
-						</div>
-						<div class="icon-box">
-							<img src="../images/equ-2n.png">
-						</div>
-					</div>
-			</div>
-				<div class="cul-dot-right">
-				<div class="dot-1"></div>
-				<div class="culture-content-wrap">
-					<div class="head-content">
-						<a href="javascript:void(0)" class="culture-click">
-						<h3>Adhere With Laws<br> And regulations</h3>
-					</a>
-						</div>
-					<div class="icon-box">
-							<img src="../images/laws-2n-final.png">
-						</div>
-					
-						
-					</div>
-				<div class="dot-2"></div>
-				<div class="culture-content-wrap">
-					<div class="head-content">
-						<a href="javascript:void(0)" class="culture-click">
-						<h3>Integrity</h3>
-					</a>
-						</div>
-					<div class="icon-box">
-							<img src="../images/inte-2n.png">
-						</div>
-					
-						
-					</div>
-				<div class="dot-3"></div>
-				<div class="culture-content-wrap">
-					<div class="head-content">
-						<a href="javascript:void(0)" class="culture-click">
-						<h3>Employee<br>Engagement/Friendly</h3>
-					</a>
-						</div>
-					<div class="icon-box">
-							<img src="../images/employee-2n-final11.png">
-						</div>
-					
-						
-					</div>
-			</div>
-		</div>
-	</div>
-</div> -->
     </div>
 </section>
 <!-- ======  vision mission section end ==== -->
@@ -361,24 +108,18 @@
 <div class="container map-main-wrapper pt-5 pb-5">
     <div class="board-title text-left pt-3 pb-3">
         <h1>Our Presence</h1>
-
     </div>
     <div class="row">
-
         <div class="col-12 map-inner-main">
             <div class="map-wrap">
                 <img src="../images/map-trans1.png" width="630" height="630" usemap="#powerpuffgirls" alt="" />
                 <map name="powerpuffgirls">
-
                     <area shape="poly"
                         coords="174,107,164,108,156,100,148,97,140,89,136,69,140,56,148,47,141,35,133,26,120,21,126,9,136,8,150,2,164,1,171,8,179,12,181,20,189,27,200,32,209,38,224,35,236,29,255,38,260,49,245,64,236,71,236,90,244,99,236,108,228,104,206,93,216,94,190,91,180,94"
                         id="jandk" href="javascript:void(0)" />
-
-						
                 </map>
             </div>
-            
-			<div class="jandk" style="display: none;">
+            <div class="jandk" style="display: none;">
                 <div class="track-image">
                     <i>
                         <img src="../images/location-map.png">
@@ -389,9 +130,8 @@
                             class="fa-solid fa-building"></i>No. Of Branches 2 <br><i
                             class="fa-solid fa-dollar-sign"></i>Total portfolio (cr) 8.89<br><i
                             class="fa-solid fa-person"></i> Active Member 2863 </p>
-                </div>              
-            </div>   
-
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -404,7 +144,6 @@
         </div>
         <div class="slick">
             <div class="journey-main-slide autoplay">
-
                 <div class="year-timline-wrap">
                     <div class="time-btn-wrap">2019</div>
                     <div class="time-content">
@@ -545,13 +284,11 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </div>
 <!-- ===== journey section end ====== -->
-
 <!-- ====== board section start ======= -->
 <section class=" board-main-wrapper">
     <div class="container pt-5 pb-5 text-center">
@@ -574,8 +311,6 @@
                                 type="button" role="tab" aria-controls="profile-tab-pane"
                                 aria-selected="false">Management Team</button>
                         </li>
-
-
                     </ul>
                 </div>
             </div>
@@ -732,22 +467,17 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 </section>
 <!-- ====== board section end ======= -->
-
 <script>
 $(document).ready(function(e) {
     $('img[usemap]').rwdImageMaps();
-
     $("#jandk").mouseenter(function() {
         $(".jandk").addClass("show");
     }).mouseleave(function() {
@@ -765,27 +495,11 @@ $(document).ready(function() {
     });
 });
 $(document).ready(function() {
-    $(".readmore-btn-click").click(function() {
-        $(".readmore-same-wrapper").show();
-    });
-    $(".cross-popup-hide").click(function() {
-        $(".readmore-same-wrapper").hide();
-    });
-});
-$(document).ready(function() {
     $(".culture-click").click(function() {
         $(".culture-popup-wrapper").show();
     });
     $(".cross-popup-hide").click(function() {
         $(".culture-popup-wrapper").hide();
-    });
-});
-$(document).ready(function() {
-    $(".mission-vision-click").click(function() {
-        $(".mission-vision-wrapper").show();
-    });
-    $(".cross-popup-hide").click(function() {
-        $(".mission-vision-wrapper").hide();
     });
 });
 </script>
@@ -806,7 +520,6 @@ $('.partners').slick({
             settings: {
                 slidesToShow: 2,
             }
-
         }
     ]
 });
@@ -853,7 +566,6 @@ $('.autoplay').slick({
             settings: {
                 slidesToShow: 1,
             }
-
         }
     ]
 });
