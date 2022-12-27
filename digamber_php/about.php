@@ -114,24 +114,28 @@
             <div class="map-wrap">
                 <img src="../images/map-trans1.png" width="630" height="630" usemap="#powerpuffgirls" alt="" />
                 <map name="powerpuffgirls">
+                    <?php while ($map1 = mysqli_fetch_array($mapres1)) { ?>
                     <area shape="poly"
-                        coords="174,107,164,108,156,100,148,97,140,89,136,69,140,56,148,47,141,35,133,26,120,21,126,9,136,8,150,2,164,1,171,8,179,12,181,20,189,27,200,32,209,38,224,35,236,29,255,38,260,49,245,64,236,71,236,90,244,99,236,108,228,104,206,93,216,94,190,91,180,94"
-                        id="jandk" href="javascript:void(0)" />
+                        coords="<?php echo $map1['coordinates'];?>"
+                        id="<?php echo $map1['location'];?>" href="javascript:void(0)" />
+                    <?php } ?>
                 </map>
             </div>
-            <div class="jandk" style="display: none;">
+            <?php while ($map = mysqli_fetch_array($mapres)) { ?>
+            <div class="<?php echo $map['location'];?>" style="display: none;">
                 <div class="track-image">
-                    <i>
-                        <img src="../images/location-map.png">
-                    </i>
+                    <i><img src="../images/location-map.png"></i>
                 </div>
                 <div class="state-name">
-                    <p><i class="fa-solid fa-location-dot"></i>Jammu & kashmir <br><i
-                            class="fa-solid fa-building"></i>No. Of Branches 2 <br><i
-                            class="fa-solid fa-dollar-sign"></i>Total portfolio (cr) 8.89<br><i
-                            class="fa-solid fa-person"></i> Active Member 2863 </p>
+                    <p> 
+                        <i class="fa-solid fa-location-dot"></i><?php echo $map['stateName'];?><br>
+                        <i class="fa-solid fa-building"></i>No. Of Branches <?php echo $map['branches'];?> <br>
+                        <i class="fa-solid fa-dollar-sign"></i>Total portfolio (cr) <?php echo $map['portfolio'];?><br>
+                        <i class="fa-solid fa-person"></i> Active Member <?php echo $map['members'];?> 
+                    </p>
                 </div>
             </div>
+            <?php } ?>
         </div>
     </div>
 </div>
@@ -319,154 +323,41 @@
             <div class="jobs-carrer mt-5">
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane active " id="directors">
-                        <div class="row management-center-wrap">
+                        <div class="row management-center-wrap">                            
+                        <?php while ($directors = mysqli_fetch_array($directorsres)) { ?>
                             <div class="col-lg-2 col-md-4 pb-4">
                                 <div class="board-candidate-wrap">
                                     <div class="candidate-image">
-                                        <img src="../images/rajiv-new_l.jpg">
+                                        <img src="../images/directors/<?php echo $directors['image'];?>">
                                     </div>
                                     <div class="candidate-name pt-3 pb-2">
                                         <a href="javascript:void(0)" class="name-click">
-                                            <h5>Rajiv Jain</h5>
+                                            <h5><?php echo $directors['name'];?></h5>
                                         </a>
-                                        <p>Chairman Cum Managing Directors</p>
+                                        <p><?php echo $directors['designation'];?></p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-2 col-md-4 pb-4">
-                                <div class="board-candidate-wrap">
-                                    <div class="candidate-image">
-                                        <img src="../images/amit-new_l.jpg">
-                                    </div>
-                                    <div class="candidate-name pt-3 pb-2">
-                                        <a href="javascript:void(0)" class="name-click">
-                                            <h5>Amit Jain</h5>
-                                        </a>
-                                        <p>Whole Time Directors</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-4 pb-4">
-                                <div class="board-candidate-wrap">
-                                    <div class="candidate-image">
-                                        <img src="../images/nayan-new_l.jpg">
-                                    </div>
-                                    <div class="candidate-name pt-3 pb-2">
-                                        <a href="javascript:void(0)" class="name-click">
-                                            <h5>Nayan Ambali</h5>
-                                        </a>
-                                        <p>Additional Non-Executive Directors</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-4 pb-4">
-                                <div class="board-candidate-wrap">
-                                    <div class="candidate-image">
-                                        <img src="../images/jatin-new_l.jpg">
-                                    </div>
-                                    <div class="candidate-name pt-3 pb-2">
-                                        <a href="javascript:void(0)" class="name-click">
-                                            <h5>Jatin Chhabra</h5>
-                                        </a>
-                                        <p>Non-Executive Directors</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-4 pb-4">
-                                <div class="board-candidate-wrap">
-                                    <div class="candidate-image">
-                                        <img src="../images/lalit-new_l.jpg">
-                                    </div>
-                                    <div class="candidate-name pt-3 pb-2">
-                                        <a href="javascript:void(0)" class="name-click">
-                                            <h5>Lalit Jain</h5>
-                                        </a>
-                                        <p>Independent Directors</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-4 pb-4">
-                                <div class="board-candidate-wrap">
-                                    <div class="candidate-image">
-                                        <img src="../images/amita-new_l.jpg">
-                                    </div>
-                                    <div class="candidate-name pt-3 pb-2">
-                                        <a href="javascript:void(0)" class="name-click">
-                                            <h5>Dr. Amita Gill</h5>
-                                        </a>
-                                        <p>Independent Directors</p>
-                                    </div>
-                                </div>
-                            </div>
+                            </div>                            
+                        <?php } ?>
                         </div>
                     </div>
                     <div class="tab-pane" id="management">
                         <div class="row management-center-wrap">
+                        <?php while ($teams = mysqli_fetch_array($teamsres)) { ?>
                             <div class="col-lg-2 col-md-4 pb-4">
                                 <div class="board-candidate-wrap">
                                     <div class="candidate-image">
-                                        <img src="../images/veer-new_l.jpg">
+                                    <img src="../images/teams/<?php echo $teams['image'];?>">
                                     </div>
                                     <div class="candidate-name pt-4 pb-2">
                                         <a href="javascript:void(0)" class="name-click">
-                                            <h5>Mr. Virendra Kumar Bhargava</h5>
+                                            <h5><?php echo $teams['name'];?></h5>
                                         </a>
-                                        <p>Vice President, B.Com</p>
+                                        <p><?php echo $teams['designation'];?></p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-2 col-md-4 pb-4">
-                                <div class="board-candidate-wrap">
-                                    <div class="candidate-image">
-                                        <img src="../images/dhram-new_l.jpg">
-                                    </div>
-                                    <div class="candidate-name pt-4 pb-2">
-                                        <a href="javascript:void(0)" class="name-click">
-                                            <h5>Mr. Dharmendra Kumar Jangid</h5>
-                                        </a>
-                                        <p>Vice President, M.Com</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-4 pb-4">
-                                <div class="board-candidate-wrap">
-                                    <div class="candidate-image">
-                                        <img src="../images/preeti-new_l.jpg">
-                                    </div>
-                                    <div class="candidate-name pt-4 pb-2">
-                                        <a href="javascript:void(0)" class="name-click">
-                                            <h5>Smt. Preeti verma</h5>
-                                        </a>
-                                        <p>Chief Operational Head, BA</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-4 pb-4">
-                                <div class="board-candidate-wrap">
-                                    <div class="candidate-image">
-                                        <img src="../images/neha-new_l.jpg">
-                                    </div>
-                                    <div class="candidate-name pt-4 pb-2">
-                                        <a href="javascript:void(0)" class="name-click">
-                                            <h5>Ms. Neha Agarwal</h5>
-                                        </a>
-                                        <p>Sr Compliance Head, Company Secretary, B.Com</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-4 pb-4">
-                                <div class="board-candidate-wrap">
-                                    <div class="candidate-image">
-                                        <img src="../images/bharti-new_l.jpg">
-                                    </div>
-                                    <div class="candidate-name pt-4 pb-2">
-                                        <a href="javascript:void(0)" class="name-click">
-                                            <h5>Ms. Bharti Sukhyani Agarwal</h5>
-                                        </a>
-                                        <p>HR Manager (MBA) HR</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <?php } ?>                            
                         </div>
                     </div>
                 </div>
@@ -475,16 +366,6 @@
     </div>
 </section>
 <!-- ====== board section end ======= -->
-<script>
-$(document).ready(function(e) {
-    $('img[usemap]').rwdImageMaps();
-    $("#jandk").mouseenter(function() {
-        $(".jandk").addClass("show");
-    }).mouseleave(function() {
-        $(".jandk").removeClass("show");
-    });
-});
-</script>
 <script>
 $(document).ready(function() {
     $(".name-click").click(function() {

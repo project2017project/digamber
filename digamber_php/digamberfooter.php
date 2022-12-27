@@ -242,16 +242,18 @@ $('.single-corner-slide').slick({
 });
 </script>
 
+<?php while ($map2 = mysqli_fetch_array($mapres2)) { ?>
 <script>
 $(document).ready(function(e) {
     $('img[usemap]').rwdImageMaps();
-    $("#jandk").mouseenter(function() {
-        $(".jandk").addClass("show");
+    $("#<?php echo $map2['location'];?>").mouseenter(function() {
+        $(".<?php echo $map2['location'];?>").addClass("show");
     }).mouseleave(function() {
-        $(".jandk").removeClass("show");
+        $(".<?php echo $map2['location'];?>").removeClass("show");
     });
 });
 </script>
+<?php } ?>
 <script>
 $(document).ready(function() {
     $(".culture-click").click(function() {

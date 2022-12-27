@@ -49,6 +49,21 @@ $testinomialres = $mysqli->query($testinomialsql) or die( mysqli_error($mysqli))
 $culturevaluesql = "select * from `culturevalue`";
 $culturevalueres = $mysqli->query($culturevaluesql) or die( mysqli_error($mysqli));
 
+$mapsql = "select * from `map`";
+$mapres = $mysqli->query($mapsql) or die( mysqli_error($mysqli));
+
+$mapsql1 = "select * from `map`";
+$mapres1 = $mysqli->query($mapsql1) or die( mysqli_error($mysqli));
+
+$mapsql2 = "select * from `map`";
+$mapres2 = $mysqli->query($mapsql2) or die( mysqli_error($mysqli));
+
+$directorssql = "select * from `directors`";
+$directorsres = $mysqli->query($directorssql) or die( mysqli_error($mysqli));
+
+$teamssql = "select * from `teams`";
+$teamsres = $mysqli->query($teamssql) or die( mysqli_error($mysqli));
+
 $jobsql = "select * from `job`";
 $jobres = $mysqli->query($jobsql) or die( mysqli_error($mysqli));
 // echo "<pre>";

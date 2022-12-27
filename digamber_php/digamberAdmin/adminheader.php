@@ -158,6 +158,27 @@ IF (!isset($_SESSION['User_Name'])) {
                             </ul>
                         </li>
                         <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Directors<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">                                
+                                <li><a href="directors.php"><i class="fa fa-flask nav_icon"></i>List</a></li>
+                                <li><a href="directorsAdd.php"><i class="fa fa-flask nav_icon"></i>Add</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Teams<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">                                
+                                <li><a href="teams.php"><i class="fa fa-flask nav_icon"></i>List</a></li>
+                                <li><a href="teamsAdd.php"><i class="fa fa-flask nav_icon"></i>Add</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Map Location<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">                                
+                                <li><a href="maplocation.php"><i class="fa fa-flask nav_icon"></i>List</a></li>
+                                <li><a href="maplocationAdd.php"><i class="fa fa-flask nav_icon"></i>Add</a></li>
+                            </ul>
+                        </li>
+                        <li>
                             <a href="#"><i class="fa fa-laptop nav_icon"></i>Job<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">                                
                                 <li><a href="job.php"><i class="fa fa-flask nav_icon"></i>List</a></li>
