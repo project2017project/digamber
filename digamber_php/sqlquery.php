@@ -10,15 +10,25 @@ $sql2 = "select * from `settings` where id='" . $c_id2 . "'";
 $res2 = $mysqli->query($sql2) or die( mysqli_error($mysqli));
 $settings2 = mysqli_fetch_array($res2);
 
-$c_id2 = 3;
-$contactsql = "select * from `settings` where id='" . $c_id2 . "'";
+$c_id3 = 3;
+$contactsql = "select * from `settings` where id='" . $c_id3 . "'";
 $contactres = $mysqli->query($contactsql) or die( mysqli_error($mysqli));
 $contactsettings = mysqli_fetch_array($contactres);
 
-$c_id2 = 4;
-$aboutsql = "select * from `settings` where id='" . $c_id2 . "'";
+$c_id4 = 4;
+$aboutsql = "select * from `settings` where id='" . $c_id4 . "'";
 $aboutres = $mysqli->query($aboutsql) or die( mysqli_error($mysqli));
 $aboutsettings = mysqli_fetch_array($aboutres);
+
+$c_id5 = 5;
+$csrsql = "select * from `settings` where id='" . $c_id5 . "'";
+$csrres = $mysqli->query($csrsql) or die( mysqli_error($mysqli));
+$csrsettings = mysqli_fetch_array($csrres);
+
+$c_id6 = 6;
+$careersql = "select * from `settings` where id='" . $c_id6 . "'";
+$careerres = $mysqli->query($careersql) or die( mysqli_error($mysqli));
+$careersettings = mysqli_fetch_array($careerres);
 
 $partnerssql = "select * from `partners`";
 $partnersres = $mysqli->query($partnerssql) or die( mysqli_error($mysqli));
@@ -66,6 +76,15 @@ $teamsres = $mysqli->query($teamssql) or die( mysqli_error($mysqli));
 
 $jobsql = "select * from `job`";
 $jobres = $mysqli->query($jobsql) or die( mysqli_error($mysqli));
+
+$journeysql = "select * from `journey` ORDER BY year";
+$journeyres = $mysqli->query($journeysql) or die( mysqli_error($mysqli));
+
+$committeessql = "select * from `committees`";
+$committeesres = $mysqli->query($committeessql) or die( mysqli_error($mysqli));
+
+$projectdetailssql = "select * from `projectdetails`";
+$projectdetailsres = $mysqli->query($projectdetailssql) or die( mysqli_error($mysqli));
 // echo "<pre>";
 // print_r($investors);
 // die;

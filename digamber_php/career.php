@@ -1,13 +1,13 @@
 <?php include 'digamberheader.php'; ?>
 <?php include 'popup.php';?>
 <!-- ======== banner start ===== -->
-<section class="investor-back csr-banner" style="background-image: url('../images/carrer-banner-1.jpg');">
+<section class="investor-back csr-banner" style="background-image: url('../images/career_Banner/<?php echo $careersettings['bannerImage']; ?>');">
     <div class="container my-1">
         <div class="row">
             <div class="col-lg-6  col-md-6 pt-4 pb-2 text-banner-wrap" data-aos="fade-down">
                 <div class="p-5 mt-5">
-                    <h4 class="display-4 career-ban-text">Become a <br> Change-maker. </h4>
-                    <p class="lead career-p-text pb-5">The Right People Make the Journey Memorable. </p>
+                    <h4 class="display-4 career-ban-text"><?php echo $careersettings['bannerHeading']; ?></h4>
+                    <p class="lead career-p-text pb-5"> <?php echo $careersettings['bannerSubHeading']; ?> </p>
                     <a href="#" class="animte-arrow">
                         <img src="../images/banner-icon-slide-1-color.png" class="animte-1-wrap"><img
                             src="../images/banner-icon-slide-1-color.png" class="animte-2-wrap"><img
@@ -21,10 +21,7 @@
 <!-- ========= banner end ======= -->
 <!-- ======= career text content start === -->
 <div class="container product-p-text-content job-openings-wrap pt-5 pb-5">
-    <p class="text-center pt-4">Our employees are our backbone and the most valuable assets that help us to empower
-        India from its roots. We believe that our success lies in our ability to attract, develop, and retain the right
-        people. Digamber Finance is built on the pillars of diversity, collaboration, and innovation that motivate
-        employees to challenge themselves and grow while balancing both their work and life.</p>
+    <p class="text-center pt-4"><?php echo $careersettings['aboutMessage']; ?></p>
     <div class="row tabs-career pt-4">
         <div class="col-12">
             <div class="tabs-wrap pt-4" id="joinus-click-enquiry">
@@ -132,11 +129,8 @@
 <div class="working-pattern-wrapper why-digamber-wrap pt-5 pb-5">
     <div class="container">
         <div class="board-title text-center pt-4 pb-4">
-            <h1>Why Digamber Finance?</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit </p>
+            <h1><?php echo $careersettings['aboutHeading']; ?></h1>
+            <p><?php echo $careersettings['loanHeading']; ?></p>
         </div>
         <div class="row mt-5">
 			<?php while ($finance = mysqli_fetch_array($financeres)) { ?>
@@ -159,7 +153,7 @@
 <!-- ==== celebrating section start ===== -->
 <div class="container celebrating-wrapper pt-5 pb-5" id="life-at">
     <div class="board-title text-center pt-3 pb-3">
-        <h1>Celebrating Life at Digamber Finance</h1>
+        <h1><?php echo $careersettings['loanSubHeading']; ?></h1>
     </div>
     <div class="row tabs-career pt-4">
         <div class="col-12">

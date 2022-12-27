@@ -147,147 +147,23 @@
             <h1>Our Jounery</h1>
         </div>
         <div class="slick">
-            <div class="journey-main-slide autoplay">
+            <div class="journey-main-slide aboutautoplay">
+                <?php while ($journey = mysqli_fetch_array($journeyres)) { ?>
                 <div class="year-timline-wrap">
-                    <div class="time-btn-wrap">2019</div>
+                    <div class="time-btn-wrap"><?php echo $journey['year'];?></div>
                     <div class="time-content">
                         <div class="head-content">
-                            <h5>September, 2019</h5>
-                            <p>AUM cross 5000 Mm in September, 2019</p>
+                            <h5><?php echo $journey['title'];?></h5>
+                            <p><?php echo $journey['description'];?></p>
                         </div>
                     </div>
                     <div class="time-icon">
                         <div class="icon-border">
-                            <img src="../images/jr-arrow-2n.png">
+                            <img src="../images/journey/<?php echo $journey['image'];?>">
                         </div>
                     </div>
                 </div>
-                <div class="year-timline-wrap">
-                    <div class="time-btn-wrap">2020</div>
-                    <div class="time-content">
-                        <div class="head-content">
-                            <h5>December, 2020</h5>
-                            <p>AUM cross 5000 Mm in September, 2020</p>
-                        </div>
-                    </div>
-                    <div class="time-icon">
-                        <div class="icon-border">
-                            <img src="../images/jr-arrow-2n.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="year-timline-wrap">
-                    <div class="time-btn-wrap">2021</div>
-                    <div class="time-content">
-                        <div class="head-content">
-                            <h5>March, 2021</h5>
-                            <p>AUM cross 5000 Mm in September, 2021</p>
-                        </div>
-                    </div>
-                    <div class="time-icon">
-                        <div class="icon-border">
-                            <img src="../images/jr-arrow-2n.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="year-timline-wrap">
-                    <div class="time-btn-wrap">2022</div>
-                    <div class="time-content">
-                        <div class="head-content">
-                            <h5>March, 2022</h5>
-                            <p>AUM cross 5000 Mm in September, 2022</p>
-                        </div>
-                    </div>
-                    <div class="time-icon">
-                        <div class="icon-border">
-                            <img src="../images/jr-set-2n.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="year-timline-wrap">
-                    <div class="time-btn-wrap">2023</div>
-                    <div class="time-content">
-                        <div class="head-content">
-                            <h5>April, 2023</h5>
-                            <p>AUM cross 5000 Mm in September, 2023</p>
-                        </div>
-                    </div>
-                    <div class="time-icon">
-                        <div class="icon-border">
-                            <img src="../images/jr-bas-2n.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="year-timline-wrap">
-                    <div class="time-btn-wrap">2024</div>
-                    <div class="time-content">
-                        <div class="head-content">
-                            <h5>April, 2024</h5>
-                            <p>AUM cross 5000 Mm in September, 2024</p>
-                        </div>
-                    </div>
-                    <div class="time-icon">
-                        <div class="icon-border">
-                            <img src="../images/jr-bas-2n.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="year-timline-wrap">
-                    <div class="time-btn-wrap">2025</div>
-                    <div class="time-content">
-                        <div class="head-content">
-                            <h5>April, 2025</h5>
-                            <p>AUM cross 5000 Mm in September, 2025</p>
-                        </div>
-                    </div>
-                    <div class="time-icon">
-                        <div class="icon-border">
-                            <img src="../images/jr-bas-2n.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="year-timline-wrap">
-                    <div class="time-btn-wrap">2026</div>
-                    <div class="time-content">
-                        <div class="head-content">
-                            <h5>April, 2026</h5>
-                            <p>AUM cross 5000 Mm in September, 2026</p>
-                        </div>
-                    </div>
-                    <div class="time-icon">
-                        <div class="icon-border">
-                            <img src="../images/jr-bas-2n.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="year-timline-wrap">
-                    <div class="time-btn-wrap">2027</div>
-                    <div class="time-content">
-                        <div class="head-content">
-                            <h5>April, 2027</h5>
-                            <p>AUM cross 5000 Mm in September, 2027</p>
-                        </div>
-                    </div>
-                    <div class="time-icon">
-                        <div class="icon-border">
-                            <img src="../images/jr-bas-2n.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="year-timline-wrap">
-                    <div class="time-btn-wrap">2028</div>
-                    <div class="time-content">
-                        <div class="head-content">
-                            <h5>April, 2028</h5>
-                            <p>AUM cross 5000 Mm in September, 2028</p>
-                        </div>
-                    </div>
-                    <div class="time-icon">
-                        <div class="icon-border">
-                            <img src="../images/jr-bas-2n.png">
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>    
             </div>
         </div>
     </div>
@@ -366,91 +242,7 @@
     </div>
 </section>
 <!-- ====== board section end ======= -->
-<script>
-$(document).ready(function() {
-    $(".name-click").click(function() {
-        $(".board-candidate-wrapper").show();
-    });
-    $(".cross-popup-hide").click(function() {
-        $(".board-candidate-wrapper").hide();
-    });
-});
-$(document).ready(function() {
-    $(".culture-click").click(function() {
-        $(".culture-popup-wrapper").show();
-    });
-    $(".cross-popup-hide").click(function() {
-        $(".culture-popup-wrapper").hide();
-    });
-});
-</script>
-<script>
-$('.partners').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    responsive: [{
-            breakpoint: 991,
-            settings: {
-                slidesToShow: 4,
-            }
-        },
-        {
-            breakpoint: 767,
-            settings: {
-                slidesToShow: 2,
-            }
-        }
-    ]
-});
-</script>
-<script>
-$('.slider-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '.slider-nav'
-});
-$('.slider-nav').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    asNavFor: '.slider-for',
-    dots: true,
-    centerMode: true,
-    centerPadding: 0,
-    focusOnSelect: true
-});
-</script>
-<script>
-$('.autoplay').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    responsive: [{
-            breakpoint: 1300,
-            settings: {
-                slidesToShow: 4,
-            }
-        },
-        {
-            breakpoint: 991,
-            settings: {
-                slidesToShow: 2,
-            }
-        },
-        {
-            breakpoint: 767,
-            settings: {
-                slidesToShow: 1,
-            }
-        }
-    ]
-});
-</script>
+
 <script>
 $(document).ready(function() {
     $('ul li a').click(function() {

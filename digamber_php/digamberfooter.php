@@ -183,6 +183,34 @@ $('.autoplay').slick({
 });
 </script>
 <script>
+$('.aboutautoplay').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [{
+            breakpoint: 1300,
+            settings: {
+                slidesToShow: 4,
+            }
+        },
+        {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
+});
+</script>
+<script>
 var a = 0;
 $(window).scroll(function() {
     var oTop = $("#counter-box").offset().top - window.innerHeight;
