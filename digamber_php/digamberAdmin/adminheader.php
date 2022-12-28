@@ -140,6 +140,20 @@ IF (!isset($_SESSION['User_Name'])) {
                             </ul>
                         </li>
                         <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Innovation<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">                                
+                                <li><a href="innovation.php"><i class="fa fa-flask nav_icon"></i>List</a></li>
+                                <li><a href="innovationAdd.php"><i class="fa fa-flask nav_icon"></i>Add</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Life<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">                                
+                                <li><a href="life.php"><i class="fa fa-flask nav_icon"></i>List</a></li>
+                                <li><a href="lifeAdd.php"><i class="fa fa-flask nav_icon"></i>Add</a></li>
+                            </ul>
+                        </li>
+                        <li>
                             <a href="#"><i class="fa fa-laptop nav_icon"></i>Customers<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">                                
                                 <li><a href="customers.php"><i class="fa fa-flask nav_icon"></i>List</a></li>

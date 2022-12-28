@@ -10,6 +10,11 @@
     <link rel="stylesheet" type="text/css" href="../vendor/slick/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="../fonts/fontawesome/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="../aos/aos.css">
+    <script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../vendor/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../aos/aos.js"></script>
+    <script type="text/javascript" src="../vendor/maps.js"></script>
 </head>
 <body>
     <?php include 'sqlquery.php'; ?>

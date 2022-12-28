@@ -12,13 +12,29 @@ $settings = mysqli_fetch_array($res);
                 <div class="main-header"><h2>Edit Location</h2></div>
                 <div class="table-responsive">
                     <table id="tbl" class="display table table-bordered table-hover table-striped">
-                        <form action="maplocationEditAction.php" method="post">
+                        <form action="maplocationEditAction.php" method="post" enctype="multipart/form-data">
                             <tbody>
                                 <tr>
                                     <td>State Name</td>
                                     <td><input type="hidden" name="id" value="<?php echo $settings['id']; ?>"/>
                                     <input type="text" class="ckeditor" name="stateName" value="<?php echo $settings['stateName']; ?>"/>
                                     Note: for new line please use &lt;br&gt; tag.</td>
+                                </tr>
+                                <tr>
+                                    <td>ID/Class</td>
+                                    <td><input type="text"  name="location" value="<?php echo $settings['location']?>" />
+                                    Note: for new line please use &lt;br&gt; tag.
+                                    <textarea name="cssproperty"><?php echo $settings['cssproperty']?></textarea>
+                                    </td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Image</td>
+                                    <td>
+                                        <img src="../../images/map/<?php echo $settings['mapimage']; ?>" width="150" height="140" style="border:#000 solid 1px;" />
+                                        <br />
+                                        <input type="file" name="pic">
+                                        <br /><b>Plz Image size </b>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Co-ordinates</td>

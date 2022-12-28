@@ -182,22 +182,12 @@
                         <div class="col-lg-6">
                             <div class="slick">
                                 <div class="single-innovation-item inno-candidate-slide-wrap">
+                                    <?php while ($innovation = mysqli_fetch_array($innovationres)) { ?>
                                     <div class="innovation-img">
-                                        <img src="../images/AUM 1000Cr_1.JPG">
-                                        <figcaption>1000 Cr Celebrate</figcaption>
+                                        <img src="../images/innovation/<?php echo $innovation['innovationImage'];?>">
+                                        <figcaption><?php echo $innovation['innovationName'];?></figcaption>
                                     </div>
-                                    <div class="innovation-img">
-                                        <img src="../images/AUM 1000Cr_2.JPG">
-                                        <figcaption>1000 Cr Celebrate</figcaption>
-                                    </div>
-                                    <div class="innovation-img">
-                                        <img src="../images/AUM 1000Cr_3.JPG">
-                                        <figcaption>1000 Cr Celebrate</figcaption>
-                                    </div>
-                                    <div class="innovation-img">
-                                        <img src="../images/AUM 1000Cr_4.JPG">
-                                        <figcaption>1000 Cr cake Cutting</figcaption>
-                                    </div>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
@@ -222,22 +212,12 @@
                         <div class="col-lg-6">
                             <div class="slick">
                                 <div class="single-innovation-item inno-candidate-slide-wrap">
+                                    <?php while ($life = mysqli_fetch_array($liferes)) { ?>
                                     <div class="innovation-img">
-                                        <img src="../images/Corporate Event at Digamber Finance.jpg">
-                                        <figcaption>Corporate Event at Digamber Finance</figcaption>
+                                        <img src="../images/life/<?php echo $life['lifeImage'];?>">
+                                        <figcaption><?php echo $life['lifeName'];?></figcaption>
                                     </div>
-                                    <div class="innovation-img">
-                                        <img src="../images/Lenders Meet 1.jpg">
-                                        <figcaption>Lenders Meet</figcaption>
-                                    </div>
-                                    <div class="innovation-img">
-                                        <img src="../images/Lenders Meet 2.jpg">
-                                        <figcaption>Lenders Meet</figcaption>
-                                    </div>
-                                    <div class="innovation-img">
-                                        <img src="../images/Lenders Meet 1.jpg">
-                                        <figcaption>Lenders Meet</figcaption>
-                                    </div>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>

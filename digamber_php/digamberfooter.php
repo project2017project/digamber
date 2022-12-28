@@ -70,11 +70,7 @@
     </div>
 </section>
 <!-- ======= footer end ========== -->
-<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
-<script type="text/javascript" src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="../vendor/slick/slick.min.js"></script>
-<script type="text/javascript" src="../aos/aos.js"></script>
-<script type="text/javascript" src="../vendor/maps.js"></script>
+
 <script>
 $(document).ready(function() {
     $(".readmore-btn-click").click(function() {
@@ -100,16 +96,6 @@ $(document).ready(function() {
     });
     $("#show-table").click(function() {
         $(".fixed-height-wrap").toggleClass("show-height");
-    });
-});
-</script>
-<script>
-$(document).ready(function() {
-    $(".name-click").click(function() {
-        $(".board-candidate-wrapper").show();
-    });
-    $(".cross-popup-hide").click(function() {
-        $(".board-candidate-wrapper").hide();
     });
 });
 </script>
@@ -284,9 +270,6 @@ $(document).ready(function(e) {
 <?php } ?>
 <script>
 $(document).ready(function() {
-    $(".culture-click").click(function() {
-        $(".culture-popup-wrapper").show();
-    });
     $(".cross-popup-hide").click(function() {
         $(".culture-popup-wrapper").hide();
     });
@@ -333,6 +316,18 @@ $(document).ready(function() {
     $('ul li a').click(function() {
         $('li a').removeClass("active");
         $(this).addClass("active");
+    });
+});
+</script>
+<script>
+$(document).ready(function(e) {
+    $('img[usemap]').rwdImageMaps();
+    $(".maparea").mouseenter(function() {
+        var mapname = $(this).attr('id');
+        $("." + mapname).addClass("show");
+    }).mouseleave(function() {
+        var mapnames = $(this).attr('id');
+        $("." + mapnames).removeClass("show");
     });
 });
 </script>

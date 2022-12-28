@@ -59,6 +59,12 @@ $testinomialres = $mysqli->query($testinomialsql) or die( mysqli_error($mysqli))
 $culturevaluesql = "select * from `culturevalue`";
 $culturevalueres = $mysqli->query($culturevaluesql) or die( mysqli_error($mysqli));
 
+$culturevaluesqljs = "select * from `culturevalue`";
+$culturevalueresjs = $mysqli->query($culturevaluesqljs) or die( mysqli_error($mysqli));
+
+$culturevaluesqlpopup = "select * from `culturevalue`";
+$culturevaluerespopup = $mysqli->query($culturevaluesqlpopup) or die( mysqli_error($mysqli));
+
 $mapsql = "select * from `map`";
 $mapres = $mysqli->query($mapsql) or die( mysqli_error($mysqli));
 
@@ -71,8 +77,20 @@ $mapres2 = $mysqli->query($mapsql2) or die( mysqli_error($mysqli));
 $directorssql = "select * from `directors`";
 $directorsres = $mysqli->query($directorssql) or die( mysqli_error($mysqli));
 
+$directorssqljs = "select * from `directors`";
+$directorsresjs = $mysqli->query($directorssqljs) or die( mysqli_error($mysqli));
+
+$directorssqlpopup = "select * from `directors`";
+$directorsrespopup = $mysqli->query($directorssqlpopup) or die( mysqli_error($mysqli));
+
 $teamssql = "select * from `teams`";
 $teamsres = $mysqli->query($teamssql) or die( mysqli_error($mysqli));
+
+$teamssqljs = "select * from `teams`";
+$teamsresjs = $mysqli->query($teamssqljs) or die( mysqli_error($mysqli));
+
+$teamssqlpopup = "select * from `teams`";
+$teamsrespopup = $mysqli->query($teamssqlpopup) or die( mysqli_error($mysqli));
 
 $jobsql = "select * from `job`";
 $jobres = $mysqli->query($jobsql) or die( mysqli_error($mysqli));
@@ -85,6 +103,12 @@ $committeesres = $mysqli->query($committeessql) or die( mysqli_error($mysqli));
 
 $projectdetailssql = "select * from `projectdetails`";
 $projectdetailsres = $mysqli->query($projectdetailssql) or die( mysqli_error($mysqli));
+
+$innovationsql = "select * from `innovation`";
+$innovationres = $mysqli->query($innovationsql) or die( mysqli_error($mysqli));
+
+$lifesql = "select * from `life`";
+$liferes = $mysqli->query($lifesql) or die( mysqli_error($mysqli));
 // echo "<pre>";
 // print_r($investors);
 // die;

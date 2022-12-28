@@ -65,7 +65,7 @@
                     while ($culturevalue = mysqli_fetch_array($culturevalueres)) { ?>
                         <div class="culture-content-wrap">
                             <div class="head-content">
-                                <a href="javascript:void(0)" class="culture-click">
+                                <a href="javascript:void(0)" class="culture-click-<?php echo $culturevalue['id'];?>">
                                     <h3><?php echo $culturevalue['name'];?></h3>
                                 </a>
                             </div>
@@ -115,9 +115,10 @@
                 <img src="../images/map-trans1.png" width="630" height="630" usemap="#powerpuffgirls" alt="" />
                 <map name="powerpuffgirls">
                     <?php while ($map1 = mysqli_fetch_array($mapres1)) { ?>
+                        <style><?php echo $map1['cssproperty']; ?></style>
                     <area shape="poly"
                         coords="<?php echo $map1['coordinates'];?>"
-                        id="<?php echo $map1['location'];?>" href="javascript:void(0)" />
+                        id="<?php echo $map1['location'];?>" class="maparea" href="javascript:void(0)" />
                     <?php } ?>
                 </map>
             </div>
@@ -207,7 +208,7 @@
                                         <img src="../images/directors/<?php echo $directors['image'];?>">
                                     </div>
                                     <div class="candidate-name pt-3 pb-2">
-                                        <a href="javascript:void(0)" class="name-click">
+                                        <a href="javascript:void(0)" class="directors-click-<?php echo $directors['id'];?>">
                                             <h5><?php echo $directors['name'];?></h5>
                                         </a>
                                         <p><?php echo $directors['designation'];?></p>
@@ -223,10 +224,10 @@
                             <div class="col-lg-2 col-md-4 pb-4">
                                 <div class="board-candidate-wrap">
                                     <div class="candidate-image">
-                                    <img src="../images/teams/<?php echo $teams['image'];?>">
+                                        <img src="../images/teams/<?php echo $teams['image'];?>">
                                     </div>
                                     <div class="candidate-name pt-4 pb-2">
-                                        <a href="javascript:void(0)" class="name-click">
+                                        <a href="javascript:void(0)" class="teams-click-<?php echo $teams['id'];?>">
                                             <h5><?php echo $teams['name'];?></h5>
                                         </a>
                                         <p><?php echo $teams['designation'];?></p>
@@ -251,11 +252,39 @@ $(document).ready(function() {
     });
 });
 </script>
+<?php while ($culturevaluejs = mysqli_fetch_array($culturevalueresjs)) { ?>
 <script>
-$(document).keydown(function(event) {
-    if (event.keyCode == 27) {
-        $('.same-digamber-popup').hide();
-    }
+$(document).ready(function() {
+    $(".culture-click-<?php echo $culturevaluejs['id'];?>").click(function() {
+        $("#culture-<?php echo $culturevaluejs['id'];?>").show();
+    });
+});
+</script>
+<?php } ?>
+<?php while ($directorsjs = mysqli_fetch_array($directorsresjs)) { ?>
+<script>
+$(document).ready(function() {
+    $(".directors-click-<?php echo $directorsjs['id'];?>").click(function() {
+        $("#directors-<?php echo $directorsjs['id'];?>").show();
+    });
+});
+</script>
+<?php } ?>
+<?php while ($teamsjs = mysqli_fetch_array($teamsresjs)) { ?>
+<script>
+$(document).ready(function() {
+    $(".teams-click-<?php echo $teamsjs['id'];?>").click(function() {
+        $("#teams-<?php echo $teamsjs['id'];?>").show();
+    });
+});
+</script>
+<?php } ?>
+
+<script>
+$(document).ready(function() {
+    $(".cross-popup-hide").click(function() {
+        $(".board-candidate-wrapper").hide();
+    });
 });
 </script>
 <?php include 'digamberfooter.php';?>

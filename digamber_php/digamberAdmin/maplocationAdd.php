@@ -15,6 +15,20 @@ include 'adminheader.php';
                                     Note: for new line please use &lt;br&gt; tag.</td>
                                 </tr>
                                 <tr>
+                                    <td>ID/Class</td>
+                                    <td><input type="text" class="ckeditor" name="location" />
+                                    Note: for new line please use &lt;br&gt; tag.
+                                    <textarea name="cssproperty"></textarea>
+                                    </td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Image</td>
+                                    <td>
+                                        <input type="file" name="pic">
+                                        <br /><b>Plz Image size </b>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td>Co-ordinates</td>
                                     <td><input type="text" class="ckeditor" name="coordinates" />
                                     Note: for new line please use &lt;br&gt; tag.</td>
