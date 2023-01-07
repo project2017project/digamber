@@ -151,21 +151,34 @@ body{
 .text-banner-wrap h4{
 	    color: #ffffff;
     font-weight: 700;
-    font-size: 60px;
-    text-transform: uppercase;
+    font-size: 58px;
+    line-height: 65px;
+    text-transform: capitalize;
     font-family: 'Source Sans Pro', sans-serif;
 
+}
+.text-banner-wrap h4 span{
+	    color: #ffeb01;    
+    text-transform: uppercase;   
+
+}
+.banner-side-wrap .slick-dots li button{
+	display: none;
 }
 
 .text-banner-wrap p{
 	    color: #ffffff;
-    font-size: 29px;
+    font-size: 26px;
     font-weight: 400;
     font-family: 'Source Sans Pro', sans-serif;
     padding-top: 12px;
     line-height: 35px;
     text-align: justify;
+    text-transform: capitalize;
 	
+}
+.text-banner-wrap p.small-size{
+	font-size: 20px;
 }
 .text-banner-wrap a.play-icon i{
 	color: #ffffff;
@@ -300,6 +313,8 @@ background-attachment: fixed;
 }
 .section-6 .sixth-cont-wrap .row{
 	text-align: center;
+	display: flex;
+    justify-content: center;
 }
 .section-6 .icon-box-wrap img{
 	width: 100%;
@@ -355,11 +370,20 @@ background-attachment: fixed;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 36px;
 }
-.section-6 .sixth-cont-wrap .row span{
+.section-6 .sixth-cont-wrap .row p{
 	    color: #ffffff;
-    font-size: 25px;
+    font-size: 24px;
     font-family: 'Source Sans Pro', sans-serif;
     line-height: 35px;
+    font-weight: 500;
+	
+}
+.section-6 .sixth-cont-wrap .row p span{
+	    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 35px;
+    font-weight: 500;
 	
 }
 
@@ -5051,8 +5075,8 @@ text-transform: uppercase;
 }
 .time-content .head-content p{
 	color: #ffffff;
-	font-size: 18px;
-    font-weight: 300;
+	font-size: 19px;
+    font-weight: 600;
 }
 
 .year-timline-wrap:nth-child(even) .time-content{
@@ -5650,7 +5674,7 @@ background: linear-gradient(27deg, rgba(233,30,99,1) 11%, rgba(233,30,99,1) 49%,
     }
 
  .lets-content h5{
- 	    font-size: 60px;
+ 	    font-size: 45px;
     font-weight: 300;
     color: #57585a;
     font-family: 'Source Sans Pro', sans-serif;
@@ -5862,7 +5886,74 @@ background: linear-gradient(27deg, rgba(233,30,99,1) 11%, rgba(233,30,99,1) 49%,
     height: 85px;
   }
 
+  .sixth-cont-wrap .row .col-lg-2{
+  	width: 18.666667%!important;
+  }
 
+
+.text-banner-wrap h4.ani-wrap{
+	position: relative;
+}
+.item-an-1,
+.item-an-2,
+.item-an-3,
+.item-an-4,
+.item-an-5{
+	position: absolute;
+	top: 65px;
+	animation-duration: 15s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+.item-an-1{
+	animation-name: anim-1;
+}
+
+.item-an-2{
+	animation-name: anim-2;
+}
+
+.item-an-3{
+	animation-name: anim-3;
+}
+.item-an-4{
+	animation-name: anim-4;
+}
+
+.item-an-5{
+	animation-name: anim-5;
+}
+
+
+
+@keyframes anim-1 {
+	0%, 3% { left: -100%; opacity: 0; }
+  9%, 15% { left: 0%; opacity: 1; }
+  21%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 24% { left: -100%; opacity: 0; }
+  30%, 36% { left: 0%; opacity: 1; }
+  42%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 42% { left: -100%; opacity: 0; }
+  48%, 54% { left: 0%; opacity: 1; }
+  60%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-4 {
+	0%, 60% { left: -100%; opacity: 0; }
+  66%, 72% { left: 0%; opacity: 1; }
+  78%, 100% { left: 110%; opacity: 0; }
+}
+@keyframes anim-5 {
+	0%, 78% { left: -100%; opacity: 0; }
+  84%, 90% { left: 0%; opacity: 1; }
+  96%, 100% { left: 110%; opacity: 0; }
+}
  @media(min-width: 1081px) and (max-width: 1400px){
  	body {
  		zoom: 0.8;
