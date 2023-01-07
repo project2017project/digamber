@@ -60,7 +60,7 @@
                                             <li><strong>Experience:</strong> <?php echo $job['jobExperience'];?></li>
                                         </ul>
                                     </div>
-                                    <div class="jobs-know-btn">
+                                    <div class="jobs-know-btn jobs-click-<?php echo $job['id'];?>">
                                         <a href="javascript:void(0)" class="btn">Know More</a>
                                     </div>
                                 </div>
@@ -287,4 +287,13 @@
 </div>
 <!-- ===== join us end ====== -->
 <!-- ======= footer start ========== -->
+<?php while ($jobjs = mysqli_fetch_array($jobresjs)) { ?>
+<script>
+$(document).ready(function() {
+    $(".jobs-click-<?php echo $jobjs['id'];?>").click(function() {
+        $("#jobs-<?php echo $jobjs['id'];?>").show();
+    });
+});
+</script>
+<?php } ?>
 <?php include 'digamberfooter.php';?>

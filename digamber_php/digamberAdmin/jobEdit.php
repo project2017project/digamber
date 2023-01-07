@@ -36,6 +36,10 @@ $settings = mysqli_fetch_array($res);
                                     <td><input type="text" class="ckeditor" name="jobExperience" value="<?php echo $settings['jobExperience']; ?>" />
                                     Note: for new line please use &lt;br&gt; tag.</td>
                                 </tr>
+                                <tr>
+                                    <td>Description</td>
+                                    <td> <textarea name='jobDescription' class="ckeditor"><?php echo $settings['jobDescription']; ?></textarea></td>
+                                </tr>
                                 <tr class="danger"><td colspan="2"><input type="submit" class="btn-success btn"></td></tr>
                             </tbody>
                         </form>

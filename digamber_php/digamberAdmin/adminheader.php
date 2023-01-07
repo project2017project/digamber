@@ -78,7 +78,7 @@ IF (!isset($_SESSION['User_Name'])) {
                         <li>
                             <a href="#"><i class="fa fa-laptop nav_icon"></i>Home<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li><a href="Edit_Home_Banner.php"><i class="fa fa-flask nav_icon"></i>Banner</a></li>
+                                <li><a href="homeBanner.php"><i class="fa fa-flask nav_icon"></i>Banner</a></li>
                                 <li><a href="Edit_Home_About.php"><i class="fa fa-flask nav_icon"></i>About</a></li>
                                 <li><a href="Edit_Home_Loan.php"><i class="fa fa-flask nav_icon"></i>Loan</a></li>
                                 <li><a href="Edit_Home_Stake.php"><i class="fa fa-flask nav_icon"></i>Stake</a></li>

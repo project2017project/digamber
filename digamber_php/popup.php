@@ -291,3 +291,32 @@
     </div>
     <!-- ======= board Popup End ====== -->
     <?php } ?>
+
+    <?php while ($jobpopup = mysqli_fetch_array($jobrespopup)) { ?>
+<!-- =====board Popup Start ======== -->
+<div class="board-candidate-wrapper same-digamber-popup" id="jobs-<?php echo $jobpopup['id'];?>">
+        <div class="popup-inner-wrap">
+            <div class="container pop-cont">
+                <div class="row">
+                    <div class="pop-cross">
+                        <a href="javascript:void(0)">
+                            <i class="fa-solid fa-xmark cross-popup-hide" id=""></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-8 col-md-8">
+                        <div class="board-po-text">
+                            <h4><?php echo $jobpopup['jobRole'];?></h4>
+                            <p><?php echo $jobpopup['jobLocation'];?></p>
+                            <p><?php echo $jobpopup['jobDepartment'];?></p>
+                            <p><?php echo $jobpopup['jobExperience'];?></p>
+                        </div>
+                        <div class="board-text">
+                        <?php echo $jobpopup['jobDescription'];?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ======= board Popup End ====== -->
+    <?php } ?>

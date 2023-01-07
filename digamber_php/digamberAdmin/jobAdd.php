@@ -30,6 +30,10 @@ include 'adminheader.php';
                                     <td><input type="text" class="ckeditor" name="jobExperience" />
                                     Note: for new line please use &lt;br&gt; tag.</td>
                                 </tr>
+                                <tr>
+                                    <td>Description</td>
+                                    <td> <textarea name='jobDescription' class="ckeditor"></textarea></td>
+                                </tr>
                                 <tr class="danger">                                     
                                     <td colspan="2"><input type="submit" class="btn-success btn"></td>
                                 </tr>

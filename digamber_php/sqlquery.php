@@ -95,6 +95,12 @@ $teamsrespopup = $mysqli->query($teamssqlpopup) or die( mysqli_error($mysqli));
 $jobsql = "select * from `job`";
 $jobres = $mysqli->query($jobsql) or die( mysqli_error($mysqli));
 
+$jobsqlpopup = "select * from `job`";
+$jobrespopup = $mysqli->query($jobsqlpopup) or die( mysqli_error($mysqli));
+
+$jobsqljs = "select * from `job`";
+$jobresjs = $mysqli->query($jobsqljs) or die( mysqli_error($mysqli));
+
 $journeysql = "select * from `journey` ORDER BY year";
 $journeyres = $mysqli->query($journeysql) or die( mysqli_error($mysqli));
 
@@ -109,6 +115,12 @@ $innovationres = $mysqli->query($innovationsql) or die( mysqli_error($mysqli));
 
 $lifesql = "select * from `life`";
 $liferes = $mysqli->query($lifesql) or die( mysqli_error($mysqli));
+
+$homebannersql = "select * from `homebanner`";
+$homebannerres = $mysqli->query($homebannersql) or die( mysqli_error($mysqli));
+
+$homebannerimagesql = "select * from `homebanner`";
+$homebannerimageres = $mysqli->query($homebannerimagesql) or die( mysqli_error($mysqli));
 // echo "<pre>";
 // print_r($investors);
 // die;

@@ -2,26 +2,50 @@
 <?php include 'popup.php';?>
 <!-- ======== banner start ===== -->
 <section class="section-2 pt-4 pb-4">
-   <div class="container my-1">
-      <div class="row">
-         <div class="col-lg-5  col-md-5 text-banner-wrap" data-aos="fade-down">
-            <div class="p-5 mt-4">
-               <h4 class="display-4"><?php echo $settings['bannerHeading']; ?></h4>
-               <p class="lead pb-5"><?php echo $settings['bannerSubHeading']; ?></p>
-               <a href="#" class="animte-arrow">
-                  <img src="../images/banner-icon-slide-1.png" class="animte-1-wrap"><img src="../images/banner-icon-slide-1.png" class="animte-2-wrap"><img src="../images/banner-icon-slide-1.png" class="animte-3-wrap">
-               </a>
+        <div class="container my-1">
+            <div class="row">
+                <div class="col-lg-5  col-md-5 text-banner-wrap" data-aos="fade-down">
+                    <div class="p-5 mt-4">
+                        <p class="lead">We offer all loan related <br>services at your doorstep </p>
+                        <h4 class="display-4 ani-wrap">
+                           Aapke<br>
+                           <?php 
+                           $i = 1;
+                           while ($homebanner = mysqli_fetch_array($homebannerres)) { ?>
+                              <span class="item-an-<?php echo $i; ?>"><?php echo $homebanner['bannerHeading']; ?></span>
+                           <?php
+                              $i++;
+                           } ?>  
+                           <br>Ka Saathi
+                        </h4>
+                        <p class="small-size pb-4">Chote Loan Bade Sapne </p>
+                        <a href="#" class="animte-arrow">
+                            <img src="../images/banner-icon-slide-1.png" class="animte-1-wrap">
+                            <img src="../images/banner-icon-slide-1.png" class="animte-2-wrap">
+                            <img src="../images/banner-icon-slide-1.png" class="animte-3-wrap">
+                        </a>
+                    </div>
+
+                </div>
+                <div class="col-lg-7 col-md-7 banner-side-wrap" data-aos="fade-up">
+                    <div class="slick">
+                        <div class="single-banner-item">
+                           <?php 
+                           $i = 1;
+                           while ($homebannerimage = mysqli_fetch_array($homebannerimageres)) { ?>
+                              <div class="p-2 space-wrap">
+                                <img class="" src="../images/Home_Banner/<?php echo $homebannerimage['bannerImage']; ?>" />
+                              </div>
+                           <?php
+                              $i++;
+                           } ?>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class="col-lg-7 col-md-7 banner-side-wrap" data-aos="fade-up">
-            <div class="p-2 space-wrap">
-               <img class="" src="../images/Home_Banner/<?php echo $settings['bannerImage']; ?>" />
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
-<!-- ========= banner end ======= -->
+        </div>
+    </section>
+    <!-- ========= banner end ======= -->
 <!-- ====== New About Design Start ============= -->
 <div class="container new-about-wrapper mt-5">
    <div class="row">
@@ -174,4 +198,17 @@
    </div>
 </div>
 <!-- ========= partners section end =========== -->
-  <?php include 'digamberfooter.php'; ?>
+<script>
+   $('.single-banner-item').slick({
+      slidesToScroll: 1,
+      autoplay: true,
+      arrows: false,
+      dots: true,
+      autoplay: true,
+      infinite: true,
+      draggable: false,
+      fade: true,
+      autoplaySpeed: 2500
+   });
+</script>
+<?php include 'digamberfooter.php'; ?>
